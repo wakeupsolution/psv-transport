@@ -26,7 +26,7 @@ const Footer = () => {
               <li><Link href="/about" className="hover:text-red-500 transition-colors">About Us</Link></li>
               <li><Link href="/gallery" className="hover:text-red-500 transition-colors">Gallery</Link></li>
               <li><Link href="/contact" className="hover:text-red-500 transition-colors">Contact Us</Link></li>
-              <li><Link href="/Company Profile.pdf" target="_blank" className="hover:text-red-500 transition-colors">Brochure</Link></li>
+              <li><Link href="/Company Profile - PSV Pragadeesh Transport.pptx.pdf" target="_blank" className="hover:text-red-500 transition-colors">Brochure</Link></li>
             </ul>
           </div>
 
