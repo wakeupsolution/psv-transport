@@ -35,21 +35,21 @@ export default function HomePage() {
     { 
       id: 1, 
       title: "REDEFINING SURFACE TRANSPORT", 
-      sub: "India's Logistics Powerhouse", 
+      sub: "Delivering Speed, Safety & Reliability",
       desktopImg: "/banner/desktopbanner1.png", // Wide image
       mobileImg: "/banner/mobilebanner1.png" // Tall image
     },
     { 
       id: 2, 
       title: "SPECIALIZED ODC MOVEMENT", 
-      sub: "Handling up to 75T with Precision", 
+      sub: " Handling up to 100 tons with precision.", 
       desktopImg: "/banner/desktopbanner2.png",
       mobileImg: "/banner/mobilebanner2.png" 
     },
     { 
       id: 3, 
       title: "PAN INDIA CONNECTIVITY", 
-      sub: "Seamless Port to Factory Flow", 
+      sub: "Seamless transport between airport, seaport, and factory.", 
       desktopImg: "/banner/desktopbanner3.png",
       mobileImg: "/banner/mobilebanner3.png" 
     },
@@ -74,7 +74,7 @@ export default function HomePage() {
   // --- STATE & EFFECTS ---
   const [currentBanner, setCurrentBanner] = useState(0);
   const [reviewIndex, setReviewIndex] = useState(0);
-
+const [status, setStatus] = useState('idle');
   // Auto-run Banner
   useEffect(() => {
     const timer = setInterval(() => {
@@ -84,14 +84,71 @@ export default function HomePage() {
   }, [banners.length]);
 
   // Auto-run Testimonials
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setReviewIndex((prev) => (prev + 1) % Math.ceil(reviews.length / 3));
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [reviews.length]);
+  const [itemsPerPage, setItemsPerPage] = useState(3);
+ useEffect(() => {
+    const handleResize = () => {
+      setItemsPerPage(window.innerWidth < 768 ? 1 : 3);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-  return (
+  const totalPages = Math.ceil(reviews.length / itemsPerPage);
+
+  const nextSlide = () => {
+    setReviewIndex((prev) => (prev + 1) % totalPages);
+  };
+
+  const prevSlide = () => {
+    setReviewIndex((prev) => (prev - 1 + totalPages) % totalPages);
+  };
+
+  // Auto-play (Optional)
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 5000);
+    return () => clearInterval(timer);
+  }, [reviewIndex, totalPages]);
+const handleCallbackSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('submitting');
+
+    // 1. Gather all the data from the form inputs
+    const formData = new FormData(e.target);
+    
+    // 2. Package the data, adding defaults for the API's required fields
+    const data = {
+  name: formData.get('name'),
+  phone: formData.get('phone'),
+  segment: 'Callback Request',
+  message: 'User requested a quick callback from the website.',
+};
+    try {
+      // 3. Send the data to your API route
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        e.target.reset(); // Clear the form
+        setTimeout(() => setStatus('idle'), 3000);
+      } else {
+        alert("Something went wrong. Please try again.");
+        setStatus('error');
+        setTimeout(() => setStatus('idle'), 3000);
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Failed to send message. Please check your connection.");
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 3000);
+    }
+  };  return (
     <div className="min-h-screen bg-white font-sans text-slate-900 overflow-x-hidden">
       
       
@@ -137,7 +194,7 @@ export default function HomePage() {
             animate={{ y: 0, opacity: 1 }} 
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <p className="text-red-500 font-black uppercase tracking-[0.4em] text-[10px] md:text-xs mb-6 drop-shadow-md">
+            <p className="text-white font-black uppercase tracking-[0.4em] text-[10px] md:text-xs mb-6 drop-shadow-md">
               {banners[currentBanner].sub}
             </p>
           </motion.div>
@@ -214,12 +271,12 @@ export default function HomePage() {
                 Based in Chennai
               </span>
               <h2 className="text-4xl md:text-5xl font-black tracking-tighter leading-tight text-slate-900">
-                PSV Pragadeesh <span className="text-red-600">Transport</span>.
+              < span className="text-blue-600"> PSV </span> <span className="text-red-600">Pragadeesh</span> <span className="text-slate-900">Transport</span>
               </h2>
             </div>
 
             <p className="text-slate-600 text-[15px] md:text-base leading-relaxed font-medium">
-              Offering all types of surface transportation (By Road & By Rail) throughout India. We provide dynamic logistical solutions tailored to the heaviest and most complex industrial requirements.
+             Offering reliable surface transportation services by road across India. We deliver efficient and flexible logistics solutions tailored to handle even the most demanding industrial requirements.
             </p>
 
             {/* Key Capabilities List */}
@@ -228,7 +285,7 @@ export default function HomePage() {
                 <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-red-100 flex items-center justify-center">
                   <svg className="w-3.5 h-3.5 text-red-600" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
                 </div>
-                <p className="text-slate-700 text-sm font-medium"><strong className="text-slate-900">Massive Scale:</strong> We offer a wide range of vehicles with capacities varying from 1 Ton to 75 Tons.</p>
+                <p className="text-slate-700 text-sm font-medium"><strong className="text-slate-900">Massive Scale:</strong>We offer a wide range of vehicles with capacities varying from 1 Ton to 100 Tons.</p>
               </div>
               
               <div className="flex items-start gap-4">
@@ -344,41 +401,72 @@ export default function HomePage() {
           ))}
 
           {/* THE 6TH CARD: Quick Enquiry Form */}
-          <div className="relative bg-white rounded-[2rem] overflow-hidden shadow-xl border border-slate-100 p-8 flex flex-col min-h-[350px] md:min-h-[400px]">
-            {/* Background Accent */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-bl-[100px] z-0"></div>
-            
-            <div className="relative z-10 flex-1 flex flex-col">
-              <div className="mb-6">
-                <div className="w-12 h-12 bg-red-100 rounded-2xl flex items-center justify-center mb-4 text-red-600">
-                   <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                </div>
-                <h3 className="text-2xl font-black text-slate-900 tracking-tight mb-2">Need a Custom Fleet?</h3>
-                <p className="text-slate-500 text-sm font-medium">Get an instant quote for your logistical needs.</p>
-              </div>
+           <div className="relative bg-white rounded-[2rem] overflow-hidden shadow-xl border border-slate-100 p-8 flex flex-col min-h-[350px] md:min-h-[400px]">
+      
+      {/* Background Accent */}
+      <div className="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-bl-[100px] z-0"></div>
 
-              {/* Mini Form */}
-              <form className="mt-auto space-y-3">
-                <input 
-                  type="text" 
-                  placeholder="Your Name" 
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-red-600/20 focus:border-red-600 transition-all font-medium text-slate-900"
-                />
-                <input 
-                  type="text" 
-                  placeholder="Phone Number" 
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-red-600/20 focus:border-red-600 transition-all font-medium text-slate-900"
-                />
-                <button 
-                  type="button" 
-                  className="w-full bg-slate-900 hover:bg-red-600 text-white font-bold py-3.5 rounded-xl text-[11px] uppercase tracking-widest transition-all shadow-md active:scale-[0.98]"
-                >
-                  Request Callback
-                </button>
-              </form>
-            </div>
+      <div className="relative z-10 flex-1 flex flex-col">
+        
+        {/* Header */}
+        <div className="mb-6">
+          <div className="w-12 h-12 bg-red-100 rounded-2xl flex items-center justify-center mb-4 text-red-600">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
           </div>
 
+          <h3 className="text-2xl font-black text-slate-900 tracking-tight mb-2">
+            Need a Custom Fleet?
+          </h3>
+
+          <p className="text-slate-500 text-sm font-medium">
+            Get an instant quote for your logistical needs.
+          </p>
+        </div>
+
+        {/* Form */}
+        <form onSubmit={handleCallbackSubmit} className="mt-auto space-y-3">
+          
+          <input
+            type="text"
+            name="name"
+            required
+            placeholder="Your Name"
+            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-red-600/20 focus:border-red-600"
+          />
+
+          <input
+            type="tel"
+            name="phone"
+            required
+            placeholder="Phone Number"
+            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-red-600/20 focus:border-red-600"
+          />
+
+          <button
+            type="submit"
+            disabled={status === "submitting"}
+            className="w-full bg-slate-900 hover:bg-red-600 text-white font-bold py-3.5 rounded-xl text-[11px] uppercase tracking-widest transition-all shadow-md active:scale-[0.98] disabled:opacity-50"
+          >
+            {status === "submitting" ? "Sending..." : "Request Callback"}
+          </button>
+
+          {/* Status Messages */}
+          {status === "success" && (
+            <p className="text-green-600 text-xs">
+              ✅ Request sent successfully!
+            </p>
+          )}
+
+          {status === "error" && (
+            <p className="text-red-600 text-xs">
+              ❌ Something went wrong. Try again.
+            </p>
+          )}
+        </form>
+      </div>
+    </div>
         </div>
       </div>
     </section>
@@ -431,102 +519,105 @@ export default function HomePage() {
       </section>
       
       {/* --- SECTION 6: EXACT TESTIMONIAL DESIGN --- */}
-      <section className="py-20 bg-white font-sans border-y border-slate-100">
-        <div className="max-w-[1300px] mx-auto px-6">
-          <div className="text-center mb-20">
-            <div className="inline-block px-4 py-1.5 bg-red-600 rounded-md text-white font-bold text-[11px] uppercase tracking-wider mb-5">
-              OUR TESTIMONIALS
+      <section className="py-20 bg-white font-sans border-y border-slate-100 overflow-hidden">
+      <div className="max-w-[1300px] mx-auto px-6">
+        <div className="text-center mb-12 md:mb-20">
+          <div className="inline-block px-4 py-1.5 bg-red-600 rounded-md text-white font-bold text-[11px] uppercase tracking-wider mb-5">
+            OUR TESTIMONIALS
+          </div>
+          <h2 className="text-[32px] md:text-[44px] font-bold text-[#4D4D4D] leading-tight">
+            Client Satisfaction Speaks
+          </h2>
+        </div>
+
+        <div className="flex flex-col lg:flex-row items-center gap-10">
+          {/* Google Summary Sidebar */}
+          <div className="lg:w-[28%] flex flex-col items-center">
+            <h3 className="text-[#FBB017] text-[28px] font-bold mb-2">EXCELLENT</h3>
+            <div className="flex gap-1 mb-2">
+              {[1, 2, 3, 4, 5].map((s) => (
+                <svg key={s} className="w-9 h-9 text-[#FBB017]" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
             </div>
-            <h2 className="text-[44px] font-bold text-[#4D4D4D] leading-tight">
-              Client Satisfaction Speaks
-            </h2>
+            <p className="text-[15px] font-bold text-black mb-4">
+              Based on <span className="font-black underline">{reviews.length} reviews</span>
+            </p>
+            <div className="relative w-[140px] h-[50px] flex items-center justify-center">
+              <span className="font-bold text-2xl text-slate-800 tracking-tight">Google</span>
+            </div>
+            
+            {/* Navigation Buttons for Desktop */}
+            <div className="flex gap-3 mt-6">
+                <button onClick={prevSlide} className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors">
+                    <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                <button onClick={nextSlide} className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors">
+                    <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
+                </button>
+            </div>
           </div>
 
-          <div className="flex flex-col lg:flex-row items-center gap-10">
-            {/* Google Summary Sidebar */}
-            <div className="lg:w-[28%] flex flex-col items-center">
-              <h3 className="text-[#FBB017] text-[28px] font-bold mb-2">EXCELLENT</h3>
-              <div className="flex gap-1 mb-2">
-                {[1, 2, 3, 4, 5].map((s) => (
-                  <svg key={s} className="w-9 h-9 text-[#FBB017]" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="text-[15px] font-bold text-black mb-4">
-                Based on <span className="font-black underline">5 reviews</span>
-              </p>
-              <div className="relative w-[140px] h-[50px]">
-                {/* Fallback text if google image isn't loaded */}
-                <span className="font-bold text-2xl text-slate-800 tracking-tight flex items-center justify-center w-full h-full">Google</span>
-              </div>
-            </div>
-
-            {/* Testimonial Cards Slider */}
-            <div className="lg:w-[72%] relative w-full overflow-hidden">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={reviewIndex}
-                  initial={{ x: 50, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  exit={{ x: -50, opacity: 0 }}
-                  transition={{ duration: 0.5, ease: "easeInOut" }}
-                  className="grid grid-cols-1 md:grid-cols-3 gap-5"
-                >
-                  {reviews.slice(reviewIndex * 3, reviewIndex * 3 + 3).map((rev) => (
-                    <div key={rev.id} className="bg-[#F2F2F2] p-7 rounded-[22px] flex flex-col min-h-[340px] relative">
-                      <div className="flex items-start justify-between mb-5">
-                        <div className="flex items-center gap-3">
-                          <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl ${rev.id % 2 === 0 ? 'bg-[#E84E1B]' : 'bg-[#0388D1]'}`}>
-                             {rev.initial}
-                          </div>
-                          <div className="overflow-hidden">
-                            <h4 className="font-bold text-[#1A1A1A] text-[15px] leading-tight truncate">{rev.name}</h4>
-                            <p className="text-[12px] text-gray-500 mt-0.5">{rev.time}</p>
-                          </div>
+          {/* Testimonial Cards Slider */}
+          <div className="lg:w-[72%] relative w-full overflow-hidden px-2">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={reviewIndex}
+                initial={{ x: 50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: -50, opacity: 0 }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                className="grid grid-cols-1 md:grid-cols-3 gap-5"
+              >
+                {reviews.slice(reviewIndex * itemsPerPage, reviewIndex * itemsPerPage + itemsPerPage).map((rev) => (
+                  <div key={rev.id} className="bg-[#F2F2F2] p-7 rounded-[22px] flex flex-col min-h-[340px] relative transition-all">
+                    <div className="flex items-start justify-between mb-5">
+                      <div className="flex items-center gap-3">
+                        <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl ${rev.id % 2 === 0 ? 'bg-[#E84E1B]' : 'bg-[#0388D1]'}`}>
+                           {rev.initial}
                         </div>
-                        <div className="flex-shrink-0">
-                          <svg className="w-5 h-5" viewBox="0 0 24 24">
-                             <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                             <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-1 .67-2.28 1.07-3.71 1.07-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                             <path fill="#FBBC05" d="M5.84 14.11c-.22-.66-.35-1.36-.35-2.11s.13-1.45.35-2.11V7.05H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.95l3.66-2.84z"/>
-                             <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.05l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                          </svg>
+                        <div className="overflow-hidden">
+                          <h4 className="font-bold text-[#1A1A1A] text-[15px] leading-tight truncate">{rev.name}</h4>
+                          <p className="text-[12px] text-gray-500 mt-0.5">{rev.time}</p>
                         </div>
                       </div>
-
-                      <div className="flex items-center gap-1 mb-4">
-                        <div className="flex gap-0.5">
-                          {[1, 2, 3, 4, 5].map((s) => (
-                            <svg key={s} className="w-[18px] h-[18px] text-[#FBB017]" fill="currentColor" viewBox="0 0 20 20">
-                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
-                          ))}
-                        </div>
-                        <div className="w-4 h-4 bg-[#2196F3] rounded-full flex items-center justify-center ml-0.5">
-                           <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" strokeWidth="4" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
-                        </div>
+                      <div className="flex-shrink-0">
+                         <svg className="w-5 h-5" viewBox="0 0 24 24">
+                           <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                           <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-1 .67-2.28 1.07-3.71 1.07-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                           <path fill="#FBBC05" d="M5.84 14.11c-.22-.66-.35-1.36-.35-2.11s.13-1.45.35-2.11V7.05H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.95l3.66-2.84z"/>
+                           <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.05l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                        </svg>
                       </div>
-
-                      <p className="text-[#333333] text-[13.5px] leading-[1.6] font-medium mb-4">{rev.text}</p>
-                      
-                      <div className="mt-auto">
-                        <button className="text-[13px] font-bold text-gray-400 hover:text-amber-500 transition-colors">Read more</button>
-                      </div>
-
-                      {rev.id % 3 === 0 && (
-                        <div className="absolute top-1/2 -right-4 -translate-y-1/2 w-9 h-9 bg-white shadow-md rounded-full flex items-center justify-center border border-gray-100 cursor-pointer z-20 hidden md:flex">
-                          <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
-                        </div>
-                      )}
                     </div>
-                  ))}
-                </motion.div>
-              </AnimatePresence>
-            </div>
+
+                    <div className="flex items-center gap-1 mb-4">
+                      <div className="flex gap-0.5">
+                        {[1, 2, 3, 4, 5].map((s) => (
+                          <svg key={s} className="w-[18px] h-[18px] text-[#FBB017]" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
+                      <div className="w-4 h-4 bg-[#2196F3] rounded-full flex items-center justify-center ml-0.5">
+                         <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" strokeWidth="4" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                      </div>
+                    </div>
+
+                    <p className="text-[#333333] text-[13.5px] leading-[1.6] font-medium mb-4">{rev.text}</p>
+                    
+                    <div className="mt-auto">
+                      <button className="text-[13px] font-bold text-gray-400 hover:text-amber-500 transition-colors">Read more</button>
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* --- SECTION 7: FLEET GALLERY --- */}
       {/* --- SECTION 7: PORTFOLIO GALLERY --- */}

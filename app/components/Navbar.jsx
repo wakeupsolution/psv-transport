@@ -37,82 +37,69 @@ const Navbar = () => {
   const isHomeTop = pathname === "/" && !isScrolled;
 
   return (
-    <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isHomeTop
-          ? "bg-white lg:bg-transparent shadow-lg lg:shadow-none py-2 lg:py-4" 
-          : "bg-white shadow-lg py-2" 
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+   <nav className="fixed w-full z-50 bg-white shadow-lg py-2">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-between items-center h-20">
 
-          {/* Logo */}
-          <div className="flex-shrink-0 z-50">
-            <Link href="/">
-              <img
-                src="/color logo.png"
-                alt="Logo"
-                className={`h-12 md:h-16 w-auto transition-all duration-300 ${
-                  isHomeTop ? "block lg:hidden" : "block"
-                }`}
-              />
-              <img
-                src="/whitelogo.png"
-                alt="Logo"
-                className={`h-12 md:h-16 w-auto transition-all duration-300 ${
-                  isHomeTop ? "hidden lg:block" : "hidden"
-                }`}
-              />
-            </Link>
+      {/* Logo */}
+      <div className="flex-shrink-0 z-50">
+        <Link href="/">
+          <img
+            src="/color logo.png"
+            alt="Logo"
+            className="h-12 md:h-16 w-auto"
+          />
+        </Link>
+      </div>
+
+      {/* ----------------- DESKTOP MENU ----------------- */}
+      <div className="hidden lg:flex items-center space-x-7">
+        <Link href="/" className="text-slate-900 hover:text-blue-500 font-semibold transition-colors">
+          Home
+        </Link>
+
+        <Link href="/about" className="text-slate-900 hover:text-blue-500 font-semibold transition-colors">
+          About Us
+        </Link>
+
+        {/* Desktop Services Dropdown */}
+        <div className="relative group">
+          <button className="text-slate-900 group-hover:text-blue-500 font-semibold flex items-center gap-1 transition-colors">
+            Our Services
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div className="absolute hidden group-hover:block w-56 bg-white text-slate-800 shadow-2xl rounded-b-md border-t-4 border-blue-600">
+            {segments.map((s) => (
+              <Link key={s.name} href={s.href} className="block px-5 py-3 hover:bg-blue-50 hover:text-blue-600 border-b border-gray-100 last:border-0 font-medium">
+                {s.name}
+              </Link>
+            ))}
           </div>
+        </div>
 
-          {/* ----------------- DESKTOP MENU ----------------- */}
-          <div className="hidden lg:flex items-center space-x-7">
-            <Link href="/" className={`${isHomeTop ? "text-slate-900 lg:text-white" : "text-slate-900"} hover:text-blue-500 font-semibold transition-colors`}>
-              Home
-            </Link>
+        <Link href="/gallery" className="text-slate-900 hover:text-blue-500 font-semibold transition-colors">
+          Gallery
+        </Link>
 
-            <Link href="/about" className={`${isHomeTop ? "text-slate-900 lg:text-white" : "text-slate-900"} hover:text-blue-500 font-semibold transition-colors`}>
-              About Us
-            </Link>
+        <Link href="/client" className="text-slate-900 hover:text-blue-500 font-semibold transition-colors">
+          Client
+        </Link>
 
-            {/* Desktop Services Dropdown */}
-            <div className="relative group">
-              <button className={`${isHomeTop ? "text-slate-900 lg:text-white" : "text-slate-900"} group-hover:text-blue-500 font-semibold flex items-center gap-1 transition-colors`}>
-                Our Services
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="absolute hidden group-hover:block w-56 bg-white text-slate-800 shadow-2xl rounded-b-md border-t-4 border-blue-600">
-                {segments.map((s) => (
-                  <Link key={s.name} href={s.href} className="block px-5 py-3 hover:bg-blue-50 hover:text-blue-600 border-b border-gray-100 last:border-0 font-medium">
-                    {s.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
+        <Link href="/contact" className="text-slate-900 hover:text-blue-500 font-semibold transition-colors">
+          Contact
+        </Link>
 
-            <Link href="/gallery" className={`${isHomeTop ? "text-slate-900 lg:text-white" : "text-slate-900"} hover:text-blue-500 font-semibold transition-colors`}>
-              Gallery
-            </Link>
-
-            <Link href="/client" className={`${isHomeTop ? "text-slate-900 lg:text-white" : "text-slate-900"} hover:text-blue-500 font-semibold transition-colors`}>
-              Client
-            </Link>
-
-            <Link href="/contact" className={`${isHomeTop ? "text-slate-900 lg:text-white" : "text-slate-900"} hover:text-blue-500 font-semibold transition-colors`}>
-              Contact
-            </Link>
-
-            <a href="/Company Profile - PSV Pragadeesh Transport.pptx.pdf" 
-              target="_blank" 
-              rel="noopener noreferrer" className="bg-red-600 text-white px-5 py-2.5 rounded shadow-lg font-bold hover:bg-orange-700 transition transform hover:scale-105">
-              BROCHURE
-            </a>
-          </div>
-
+        <a
+          href="/Company Profile - PSV Pragadeesh Transport.pptx.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-red-600 text-white px-5 py-2.5 rounded shadow-lg font-bold hover:bg-orange-700 transition transform hover:scale-105"
+        >
+          BROCHURE
+        </a>
+      </div>
           {/* ----------------- MOBILE HAMBURGER ICON ----------------- */}
           <div className="flex lg:hidden items-center">
             <button

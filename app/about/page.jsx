@@ -148,48 +148,77 @@ export default function AboutPage() {
       </div>
 
 
-      <div className="bg-slate-950 pt-24 pb-40 text-white overflow-hidden relative">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-red-600/10 rounded-full blur-[120px]"></div>
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter">Why <span className="text-red-600">Choose</span> Us?</h2>
-            <div className="h-1.5 w-24 bg-blue-600 mx-auto mt-4 rounded-full"></div>
-            <p className="text-slate-400 mt-6 font-bold tracking-[0.3em] uppercase text-xs">The Pragadeesh Advantage</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="group bg-white/[0.03] border border-white/10 p-8 rounded-[2rem] hover:bg-white/[0.08] transition-all duration-500 hover:border-blue-500/50">
-              <div className="w-14 h-14 bg-blue-600/20 text-blue-500 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-xl">
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-              </div>
-              <h3 className="text-xl font-bold mb-4">Expert Young Team</h3>
-              <p className="text-slate-400 text-sm leading-relaxed font-medium">Powered by a dynamic young team with 10+ years of deep industry roots.</p>
-            </div>
-            <div className="group bg-white/[0.03] border border-white/10 p-8 rounded-[2rem] hover:bg-white/[0.08] transition-all duration-500 hover:border-red-500/50">
-              <div className="w-14 h-14 bg-red-600/20 text-red-500 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-red-600 group-hover:text-white transition-all duration-500 shadow-xl">
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-              </div>
-              <h3 className="text-xl font-bold mb-4">Tailored Solutions</h3>
-              <p className="text-slate-400 text-sm leading-relaxed font-medium">We understand your requirements instantly and offer the right tailored solution.</p>
-            </div>
-            <div className="group bg-white/[0.03] border border-white/10 p-8 rounded-[2rem] hover:bg-white/[0.08] transition-all duration-500 hover:border-blue-400/50">
-              <div className="w-14 h-14 bg-blue-400/20 text-blue-400 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-400 group-hover:text-slate-900 transition-all duration-500">
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-              </div>
-              <h3 className="text-xl font-bold mb-4">PAN India Speed</h3>
-              <p className="text-slate-400 text-sm leading-relaxed font-medium">Fast and safe service across our entire India network without compromising quality.</p>
-            </div>
-            <div className="group bg-white/[0.03] border border-white/10 p-8 rounded-[2rem] hover:bg-white/[0.08] transition-all duration-500 hover:border-slate-400/50">
-              <div className="w-14 h-14 bg-slate-600/20 text-slate-400 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-slate-100 group-hover:text-slate-900 transition-all duration-500">
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-              </div>
-              <h3 className="text-xl font-bold mb-4">Continuous Growth</h3>
-              <p className="text-slate-400 text-sm leading-relaxed font-medium">We view customer service as a continuous learning process to better serve you.</p>
-            </div>
-          </div>
+      <div className="bg-slate-50 pt-24 pb-40 text-slate-900 overflow-hidden relative">
+  {/* Subtler decorative blobs for light mode */}
+  <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-400/10 rounded-full blur-[120px]"></div>
+  <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-red-400/10 rounded-full blur-[120px]"></div>
+
+  <div className="max-w-7xl mx-auto px-6 relative z-10">
+    <div className="text-center mb-20">
+      <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-slate-800">
+        Why <span className="text-red-600">Choose</span> Us?
+      </h2>
+      <div className="h-1.5 w-24 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+      <p className="text-slate-500 mt-6 font-bold tracking-[0.3em] uppercase text-xs">
+        The Pragadeesh Advantage
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Card 1 */}
+      <div className="group bg-white border border-slate-200 p-8 rounded-[2rem] shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 hover:border-blue-500/50">
+        <div className="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-sm">
+          <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
         </div>
+        <h3 className="text-xl font-bold mb-4 text-slate-800">Expert Young Team</h3>
+        <p className="text-slate-600 text-sm leading-relaxed font-medium">
+          Powered by a dynamic young team with 10+ years of deep industry roots.
+        </p>
       </div>
-        {/* 5. VISION & MISSION SECTION */}
+
+      {/* Card 2 */}
+      <div className="group bg-white border border-slate-200 p-8 rounded-[2rem] shadow-sm hover:shadow-xl hover:shadow-red-500/10 transition-all duration-500 hover:border-red-500/50">
+        <div className="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-red-600 group-hover:text-white transition-all duration-500 shadow-sm">
+          <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+        </div>
+        <h3 className="text-xl font-bold mb-4 text-slate-800">Tailored Solutions</h3>
+        <p className="text-slate-600 text-sm leading-relaxed font-medium">
+          We understand your requirements instantly and offer the right tailored solution.
+        </p>
+      </div>
+
+      {/* Card 3 */}
+      <div className="group bg-white border border-slate-200 p-8 rounded-[2rem] shadow-sm hover:shadow-xl hover:shadow-blue-400/10 transition-all duration-500 hover:border-blue-400/50">
+        <div className="w-14 h-14 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-400 group-hover:text-white transition-all duration-500 shadow-sm">
+          <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        <h3 className="text-xl font-bold mb-4 text-slate-800">PAN India Speed</h3>
+        <p className="text-slate-600 text-sm leading-relaxed font-medium">
+          Fast and safe service across our entire India network without compromising quality.
+        </p>
+      </div>
+
+      {/* Card 4 */}
+      <div className="group bg-white border border-slate-200 p-8 rounded-[2rem] shadow-sm hover:shadow-xl hover:shadow-slate-400/10 transition-all duration-500 hover:border-slate-400/50">
+        <div className="w-14 h-14 bg-slate-200 text-slate-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-slate-800 group-hover:text-white transition-all duration-500 shadow-sm">
+          <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+          </svg>
+        </div>
+        <h3 className="text-xl font-bold mb-4 text-slate-800">Continuous Growth</h3>
+        <p className="text-slate-600 text-sm leading-relaxed font-medium">
+          We view customer service as a continuous learning process to better serve you.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>  {/* 5. VISION & MISSION SECTION */}
       <div className="py-24 bg-white relative overflow-hidden">
         {/* Decorative background element */}
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[600px] h-[600px] bg-slate-50 rounded-full -z-0"></div>
