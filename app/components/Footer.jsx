@@ -78,7 +78,7 @@ const Footer = () => {
             <div className="w-full h-32 rounded-lg overflow-hidden border">
               <iframe
                 title="Google Map"
-                src="https://maps.google.com/maps?q=Avadi,%20Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed"
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.007052894663!2d80.1111064!3d13.098739399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526358a8442b03%3A0x9998cd884215d52e!2sPSV%20PRAGADEESH%20TRANSPORT!5e0!3m2!1sen!2sin!4v1776949535786!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
