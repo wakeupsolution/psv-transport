@@ -42,7 +42,7 @@ export default function HCVSegmentPage() {
   {/* Background Image Wrapper */}
   <div className="absolute inset-0 z-0">
     <img 
-      src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=2000&auto=format&fit=crop" 
+      src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2000&auto=format&fit=crop" 
       alt="HCV Heavy Haulage Transport Background" 
       className="w-full h-full object-cover"
     />

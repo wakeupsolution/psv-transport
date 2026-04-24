@@ -45,7 +45,7 @@ export default function ICVSegmentPage() {
   {/* Background Image Wrapper */}
   <div className="absolute inset-0 z-0">
     <img 
-      src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?q=80&w=2000&auto=format&fit=crop" 
+      src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2000&auto=format&fit=crop" 
       alt="ICV Open Truck Transport Background" 
       className="w-full h-full object-cover"
     />

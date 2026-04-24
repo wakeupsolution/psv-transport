@@ -240,7 +240,7 @@ const handleCallbackSubmit = async (e) => {
             className="relative h-[500px] rounded-[1rem] overflow-hidden shadow-2xl group"
           >
             <Image 
-              src="/serviceimage/g14.jpg" 
+              src="/serviceimage/g17.jpg" 
               fill 
               className="object-cover transition-transform duration-1000 group-hover:scale-110" 
               alt="About PSV Pragadeesh" 

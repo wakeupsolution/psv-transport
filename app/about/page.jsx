@@ -10,7 +10,7 @@ export default function AboutPage() {
       <div className="relative w-full h-[64vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=2000&auto=format&fit=crop" 
+            src="/banner/about alter.jpg" 
             alt="Pragadeesh Transport Fleet" 
             className="w-full h-full object-cover scale-110"
           />
@@ -160,7 +160,7 @@ export default function AboutPage() {
       </h2>
       <div className="h-1.5 w-24 bg-blue-600 mx-auto mt-4 rounded-full"></div>
       <p className="text-slate-500 mt-6 font-bold tracking-[0.3em] uppercase text-xs">
-        The Pragadeesh Advantage
+        We Growing with Every Successful Delivery
       </p>
     </div>
 
@@ -172,9 +172,9 @@ export default function AboutPage() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
           </svg>
         </div>
-        <h3 className="text-xl font-bold mb-4 text-slate-800">Expert Young Team</h3>
+        <h3 className="text-xl font-bold mb-4 text-slate-800">Experienced Team</h3>
         <p className="text-slate-600 text-sm leading-relaxed font-medium">
-          Powered by a dynamic young team with 10+ years of deep industry roots.
+          Skilled professionals with strong knowledge in transport and cargo handling.
         </p>
       </div>
 
