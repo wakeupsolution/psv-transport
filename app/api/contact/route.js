@@ -16,7 +16,7 @@ export async function POST(request) {
 
     const mailOptions = {
       from: `"PSV Pragadeesh Transport Web" <${process.env.EMAIL_USER}>`,
-      to: 'rajhussain1042003@gmail.com',
+      to: 'info.psvtransport@gmail.com',
       replyTo: email,
       subject: `🚚 New Quote Request: ${segment} - ${name}`,
       text: `New Quote Request\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nSegment: ${segment}\nCargo: ${cargo}`, 
