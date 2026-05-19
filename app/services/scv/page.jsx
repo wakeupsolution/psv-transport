@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { body } from 'framer-motion/client';
 
 export const metadata = {
   title: 'SCV Segment - Light Commercial Vehicles',
@@ -9,28 +10,49 @@ export const metadata = {
 const scvVehicles = [
   {
     id: 1,
-    name: "TATA SUPER ACE",
+    name: "SCV Trucks (Small Commercial Vehicles)",
     service: "Chennai Local & Annual Contract",
     description: "The ideal compact truck for navigating narrow city streets. Perfect for FMCG distribution, e-commerce parcel deliveries, and daily intra-city logistics with excellent fuel efficiency.",
-    specs: { length: "8.5 ft", width: "4.5 ft", height: "6.0 ft", payload: "1.0 Ton" },
+    body_type: "Body Type: Open and Closed ",
+    specs: [
+  {
+    length: "7 ft",
+    width: "4.5 ft",
+    height: "6 ft",
+    payload: "Up to 1 Ton",
+    popular_models: "Popular Models: Ape, Ace, Super Ace, Bolero, Dost, Bada Dost, Intra V30, Intra V50, Etc."
+  },
+  {
+    length: "8 ft",
+    width: "5 ft",
+    height: "6 ft",
+    payload: "Up to 1.5 Tons",
+  },
+  {
+    length: "9-10 ft",
+    width: "5.5 ft",
+    height: "6 ft",
+    payload: "Up to 2 Tons",
+  },
+],
     image: "/serviceimage/g1.jpg", 
   },
-  {
-    id: 2,
-    name: "ASHOK LEYLAND DOST",
-    service: "Chennai Local & Annual Contract",
-    description: "A robust and versatile light commercial vehicle. Built to handle slightly heavier local loads like hardware, agricultural produce, and consumer durables with superior suspension.",
-    specs: { length: "8.7 ft", width: "5.3 ft", height: "6.0 ft", payload: "1.5 Ton" },
-    image: "/serviceimage/g2.jpg", 
-  },
-  {
-    id: 3,
-    name: "MAHINDRA BOLERO",
-    service: "Chennai Local & Annual Contract",
-    description: "The undisputed king of rugged terrain. Designed for heavy-duty local transport, construction materials, and demanding annual contracts where durability is non-negotiable.",
-    specs: { length: "9.0 ft", width: "5.5 ft", height: "6.0 ft", payload: "1.5 Ton" },
-    image: "/serviceimage/g3.jpg", 
-  }
+  // {
+  //   id: 2,
+  //   name: "ASHOK LEYLAND DOST",
+  //   service: "Chennai Local & Annual Contract",
+  //   description: "A robust and versatile light commercial vehicle. Built to handle slightly heavier local loads like hardware, agricultural produce, and consumer durables with superior suspension.",
+  //   specs: { length: "8.7 ft", width: "5.3 ft", height: "6.0 ft", payload: "1.5 Ton" },
+  //   image: "/serviceimage/g2.jpg", 
+  // },
+  // {
+  //   id: 3,
+  //   name: "MAHINDRA BOLERO",
+  //   service: "Chennai Local & Annual Contract",
+  //   description: "The undisputed king of rugged terrain. Designed for heavy-duty local transport, construction materials, and demanding annual contracts where durability is non-negotiable.",
+  //   specs: { length: "9.0 ft", width: "5.5 ft", height: "6.0 ft", payload: "1.5 Ton" },
+  //   image: "/serviceimage/g3.jpg", 
+  // }
 ];
 
 export default function SCVSegmentPage() {
@@ -87,43 +109,171 @@ export default function SCVSegmentPage() {
                 
                 {/* Badge & Title */}
                 <div className="mb-6">
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#0000fe]/10 text-[#0000fe] font-semibold text-xs tracking-wider uppercase mb-4">
-                    Payload: {vehicle.specs.payload}
-                  </div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-[#000000] mb-2">
+                
+                  <h2 className="text-3xl md:text-4xl font-bold red-500 mb-2">
                     {vehicle.name}
                   </h2>
-                  <h3 className="text-lg font-medium text-gray-500 flex items-center">
-                    <svg className="w-5 h-5 mr-2 text-[#fe0000]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    {vehicle.service}
-                  </h3>
+                  <div className="space-y-2">
+
+  <p className="text-white/80 text-[11px] md:text-xs uppercase tracking-[4px] font-bold">
+    Body Type
+  </p>
+
+  <h4 className="text-red-500 text-2xl md:text-3xl font-black leading-tight">
+    {vehicle.body_type}
+  </h4>
+
+  
+
+</div>
+
+                  
                 </div>
                 
                 {/* Description */}
-                <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                  {vehicle.description}
-                </p>
+               
 
                 {/* Professional Data Grid */}
                 <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm mb-8">
                   <h4 className="text-sm font-bold text-[#000000] uppercase tracking-wider mb-4 border-b border-gray-100 pb-2">
-                    Technical Specifications
+                    Available Specifications
                   </h4>
-                  <div className="grid grid-cols-3 gap-6">
-                    <div>
-                      <span className="block text-xs uppercase tracking-wider text-gray-500 mb-1">Length</span>
-                      <span className="block text-xl font-bold text-[#0000fe]">{vehicle.specs.length}</span>
-                    </div>
-                    <div>
-                      <span className="block text-xs uppercase tracking-wider text-gray-500 mb-1">Width</span>
-                      <span className="block text-xl font-bold text-[#0000fe]">{vehicle.specs.width}</span>
-                    </div>
-                    <div>
-                      <span className="block text-xs uppercase tracking-wider text-gray-500 mb-1">Height</span>
-                      <span className="block text-xl font-bold text-[#0000fe]">{vehicle.specs.height}</span>
-                    </div>
-                  </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8">
+
+  {vehicle.specs.map((spec, index) => (
+    <div
+      key={index}
+      className="group bg-gradient-to-br from-gray-50 to-white border border-gray-100 rounded-2xl p-5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+    >
+
+      <div className="flex items-center justify-between mb-4">
+
+        <div className="w-10 h-10 rounded-xl bg-[#0000fe]/10 flex items-center justify-center">
+          <span className="text-[#0000fe] font-bold text-sm">
+            {index + 1}
+          </span>
+        </div>
+
+        <span className="text-xs font-bold uppercase tracking-widest text-[#fe0000]">
+          SCV
+        </span>
+
+      </div>
+
+      <div className="space-y-3">
+
+        <div>
+          <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">
+            Length
+          </p>
+
+          <h4 className="text-xl font-extrabold text-gray-900">
+            {spec.length}
+          </h4>
+        </div>
+
+        <div>
+          <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">
+            Width
+          </p>
+
+          <h4 className="text-lg font-bold text-gray-800">
+            {spec.width}
+          </h4>
+        </div>
+
+        <div>
+          <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">
+            Height
+          </p>
+
+          <h4 className="text-lg font-bold text-gray-800">
+            {spec.height}
+          </h4>
+        </div>
+
+        <div className="pt-3 border-t border-gray-100">
+
+          <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">
+            Payload Capacity
+          </p>
+
+          <div className="inline-flex items-center bg-[#0000fe]/10 text-[#0000fe] px-4 py-2 rounded-full font-bold text-sm">
+            {spec.payload}
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  ))}
+
+</div>
                 </div>
+                {/* Body Type & Popular Models */}
+<div className="space-y-5 mb-8">
+
+
+
+  {/* Popular Models Card */}
+  <div className="bg-white border border-gray-200 rounded-3xl p-5 md:p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+
+    <div className="flex items-start gap-4">
+
+      <div className="w-14 h-14 rounded-2xl bg-[#fe0000]/10 flex items-center justify-center flex-shrink-0">
+
+        <svg
+          className="w-7 h-7 text-[#fe0000]"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M9 17V5m0 0L5 9m4-4l4 4m6 4v6m0 0l-4-4m4 4l4-4"
+          />
+        </svg>
+
+      </div>
+
+      <div className="flex-1">
+
+        <p className="text-gray-500 text-xs uppercase tracking-[3px] font-semibold mb-2">
+          Popular Models
+        </p>
+
+        <div className="flex flex-wrap gap-3">
+
+          {[
+            "Ape",
+            "Ace",
+            "Super Ace",
+            "Bolero",
+            "Dost",
+            "Bada Dost",
+            "Intra V30",
+            "Intra V50",
+          ].map((model, index) => (
+            <span
+              key={index}
+              className="px-4 py-2 rounded-full bg-gray-100 hover:bg-[#fe0000] hover:text-white text-gray-700 text-sm font-semibold transition-all duration-300 cursor-default"
+            >
+              {model}
+            </span>
+          ))}
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
                 {/* Corporate Call to Action */}
                 <div>
