@@ -73,21 +73,21 @@ const Footer = () => {
             <h4 className="text-white font-bold mb-4 border-b border-red-600 w-fit pb-1 uppercase tracking-wider text-sm">
               Fleet Segments
             </h4>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/services/hcv"
+                  href="/services/scv"
                   className="hover:text-red-500 transition-colors"
                 >
-                  Hydraulic Axle Trailers
+                  SCV Trucks
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/hcv"
+                  href="/services/lcv"
                   className="hover:text-red-500 transition-colors"
                 >
-                  Mechanical Trailers
+                  LCV Trucks
                 </Link>
               </li>
               <li>
@@ -100,10 +100,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services/lcv"
+                  href="/services/odc"
                   className="hover:text-red-500 transition-colors"
                 >
-                  ICV Trucks
+                  ODC Trucks
                 </Link>
               </li>
               <li>
@@ -111,7 +111,7 @@ const Footer = () => {
                   href="/services/icv"
                   className="hover:text-red-500 transition-colors"
                 >
-                  LCV Truck
+                  Flatbed Trailers
                 </Link>
               </li>
               <li>
@@ -119,13 +119,23 @@ const Footer = () => {
                   href="/services/scv"
                   className="hover:text-red-500 transition-colors"
                 >
-                  SCV Trucks
+                  Semibed Trailers
                 </Link>
+              </li>
+              <li>
                 <Link
                   href="/services/scv"
                   className="hover:text-red-500 transition-colors"
                 >
-                  Special Trucks
+                  Lowbed Trailers
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/scv"
+                  className="hover:text-red-500 transition-colors"
+                >
+                  Hydraulic Trailers
                 </Link>
               </li>
             </ul>
