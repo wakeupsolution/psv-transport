@@ -29,11 +29,11 @@ const Navbar = () => {
     { name: "SCV Segment", href: "/services/scv" },
     { name: "LCV Segment", href: "/services/lcv" },
     { name: "HCV Segment", href: "/services/hcv" },
-    { name: "ODC Trucks", href: "/services/#" },
-    { name: "Flatbed Trailers", href: "/services/trailer" },
-    { name: "Semibed  Trailers", href: "/services/trailer" },
-    { name: "Lowbed   Trailers", href: "/services/trailer" },
-    { name: "Hydraulic   Trailers", href: "/services/trailer" },
+    { name: "ODC Trucks", href: "/services/odc" },
+    { name: "Flatbed Trailers", href: "/services/Flatbed" },
+    { name: "Semibed Trailers", href: "/services/Semibed" },
+    { name: "Lowbed Trailers", href: "/services/Lowbed" },
+    { name: "Hydraulic Trailers", href: "/services/Hydraulic" },
   ];
 
   // Condition for navbar style

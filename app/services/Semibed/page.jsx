@@ -2,33 +2,41 @@ import React from "react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "LCV Segment - Light Commercial Vehicles",
+  title: "Semibed Trailers Segment - Heavy Industrial Cargo",
   description:
-    "Fleets providing in LCV Segment for regional logistics and medium-duty transport.",
+    "High-tonnage 40ft to 50ft Semibed Trailers specialized for handling heavy point load items and out-of-gauge equipment in Chennai.",
 };
 
-const lcvVehicles = [
+const semibedVehicles = [
   {
     id: 1,
-    name: "LCV Trucks (Light Commercial Vehicles)",
-    service: "Regional Transport & Distribution",
+    name: "Semibed Trailers",
+    service: "Heavy Duty Industrial & Point Load Transport",
     description:
-      "Our medium-duty Light Commercial Vehicle fleet is engineered to bridge the gap between intra-city distribution and long-haul logistics. Designed for excellent turnaround times and optimal fuel efficiency, these trucks provide superior chassis stability and higher volume configurations for safely transporting FMCG, white goods, industrial cargo, and manufacturing materials.",
-    body_type: "Open and Closed",
-    size_range: "32 ft - 9 Tons",
+      "Engineered specifically to support ultra-heavy structural distributions that demand a lowered center of gravity and optimized vertical clearance. Our semibed trailer fleet features exceptional structural reinforcement, making it the premier choice for handling high-density point load items, manufacturing dies, transformers, structural blocks, and over-dimensional machinery out of Chennai's top industrial zones.",
+    trailer_type: "Lowered Semibed Platform",
+    configs_title: "Available Trailer Configurations",
     variants: [
-      "14 ft (L) × 6 ft (W) × 7 ft (H) | Payload: Up to 3.5 Tons",
-      "17 ft (L) × 6 ft (W) × 7 ft (H) | Payload: Up to 5 Tons",
-      "19 ft (L) × 7 ft (W) × 7 ft (H) | Payload: Up to 7.5 Tons",
-      "20 ft (L) × 7 ft (W) × 7 ft (H) | Payload: Up to 7.5 Tons",
-      "32 ft (L) × 8 ft (W) × 8 ft (H) | Payload: Up to 9 Tons",
+      "40-50 ft (L) × 9 ft (W) × 9 ft (H) | Payload Capacity: Up to 40 Tons",
     ],
-    popular_models: ["Eicher", "TATA", "Ashok Leyland", "Mahindra"],
-    image: "/serviceimage/g7.jpg",
+    capabilities_title: "Key Cargo Capabilities",
+    capabilities: [
+      "Easily accommodates Over-Dimensional Cargoes (ODC)",
+      "Engineered to withstand intense, concentrated Point Load Items",
+      "Optimized deck height for tall out-of-gauge equipment",
+      "Perfect for industrial infrastructure, casting molds, transformers, and heavy engineering blocks",
+    ],
+    special_features: [
+      "Low-Profile Clearance Deck",
+      "Concentrated Point-Load Bracing",
+      "Heavy-Duty Multi-Axle Systems",
+      "High-Tensile Lash Anchors",
+    ],
+    image: "/serviceimage/g16.jpg", // Update with your actual Semibed Trailer image path
   },
 ];
 
-export default function LCVSegmentPage() {
+export default function SemibedTrailersPage() {
   return (
     <div className="min-h-screen bg-[#f8f9fa] pt-16 md:pt-20 pb-16 font-sans antialiased">
       {/* Corporate Page Header */}
@@ -36,30 +44,28 @@ export default function LCVSegmentPage() {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2000&auto=format&fit=crop"
-            className="w-full h-full object-cover opacity-40"
-            alt="LCV Background"
+            className="w-full h-full object-cover opacity-30"
+            alt="Semibed Trailers Fleet Background"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/70 to-slate-900/80"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 text-center">
           <span className="text-[#0000fe] font-bold tracking-widest uppercase text-xs md:text-sm mb-3 block">
-            Fleet Overview
+            Heavy Fleet Overview
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
-            Light Commercial <span className="text-[#fe0000]">Vehicles</span>{" "}
-            (LCV)
+            Semibed <span className="text-[#fe0000]">Trailers</span>
           </h1>
           <p className="text-base md:text-lg text-slate-300 max-w-2xl mx-auto">
-            Optimized for medium-duty transport, our LCV fleet delivers the
-            perfect balance of space, payload capability, and performance for
-            regional supply chains.
+            Lowered-deck heavy platforms built for high vertical clearances,
+            out-of-gauge cargo, and dense point-load projects.
           </p>
         </div>
       </div>
 
       {/* Main Content Layout */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {lcvVehicles.map((vehicle) => (
+        {semibedVehicles.map((vehicle) => (
           <div
             key={vehicle.id}
             className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12 text-left"
@@ -88,32 +94,32 @@ export default function LCVSegmentPage() {
                 <div className="grid grid-cols-2 gap-4 border-t border-b border-gray-200 py-4 my-4 text-left">
                   <div>
                     <p className="text-gray-500 text-[11px] uppercase tracking-[2px] font-bold">
-                      Body Type
+                      Maximum Capacity
                     </p>
-                    <h4 className="text-gray-900 text-lg font-extrabold">
-                      {vehicle.body_type}
+                    <h4 className="text-gray-900 text-base font-extrabold">
+                      Up to 40 Tons
                     </h4>
                   </div>
                   <div>
                     <p className="text-gray-500 text-[11px] uppercase tracking-[2px] font-bold">
-                      Max Range
+                      Expanded Deck Width
                     </p>
-                    <h4 className="text-[#fe0000] text-lg font-extrabold">
-                      {vehicle.size_range}
+                    <h4 className="text-red-500 text-base font-extrabold">
+                      9 Feet Width Clearance
                     </h4>
                   </div>
                 </div>
               </div>
 
               {/* Description */}
-              {/* <p className="text-gray-600 text-sm sm:text-base mb-6 leading-relaxed text-left">
+              <p className="text-gray-600 text-sm sm:text-base mb-6 leading-relaxed text-left">
                 {vehicle.description}
-              </p> */}
+              </p>
 
-              {/* Layout Dimensions Line List */}
-              <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm mb-6 text-left">
+              {/* Box 1: Available Configurations */}
+              <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm mb-4 text-left">
                 <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-3">
-                  Payload & Dimension Options
+                  {vehicle.configs_title}
                 </h4>
                 <ul className="space-y-2.5">
                   {vehicle.variants.map((variant, idx) => (
@@ -122,36 +128,68 @@ export default function LCVSegmentPage() {
                       className="flex items-start gap-2.5 text-sm text-gray-700"
                     >
                       <span className="w-2 h-2 rounded-full bg-[#0000fe] mt-2 flex-shrink-0" />
-                      <span className="font-medium">{variant}</span>
+                      <span className="font-semibold text-gray-900">
+                        {variant}
+                      </span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              {/* Popular Models Strip with Responsive Hover States */}
+              {/* Box 2: Core Engineering Capabilities */}
+              <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm mb-4 text-left">
+                <h4 className="text-xs font-bold text-[#fe0000] uppercase tracking-wider mb-3">
+                  {vehicle.capabilities_title}
+                </h4>
+                <ul className="space-y-2.5">
+                  {vehicle.capabilities.map((item, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-start gap-2.5 text-sm text-gray-700"
+                    >
+                      <svg
+                        className="w-4 h-4 text-[#fe0000] mt-0.5 flex-shrink-0"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2.5"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span className="font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Box 3: Technical Features Tag Strip */}
               <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm mb-6 text-left">
                 <p className="text-gray-500 text-[11px] uppercase tracking-[2px] font-bold mb-2">
-                  Popular Handled Models
+                  Specialized Semibed Hardware
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {vehicle.popular_models.map((model, idx) => (
+                  {vehicle.special_features.map((feature, idx) => (
                     <span
                       key={idx}
                       className="px-3 py-1 rounded-md bg-gray-50 border border-gray-200 text-gray-700 text-xs font-semibold transition-all duration-300 hover:bg-[#fe0000] hover:text-white hover:border-[#fe0000] cursor-default"
                     >
-                      {model}
+                      {feature}
                     </span>
                   ))}
                 </div>
               </div>
 
-              {/* Action Link Button */}
+              {/* Action Button */}
               <div className="text-left">
                 <Link
                   href="/contact"
                   className="inline-flex items-center justify-center w-full sm:w-auto bg-[#fe0000] text-white px-8 py-3.5 rounded-lg font-semibold tracking-wide transition-all duration-300 hover:bg-[#cc0000] hover:shadow-lg"
                 >
-                  Request a Quote
+                  Request a Semibed Quote
                   <svg
                     className="w-4 h-4 ml-2"
                     fill="none"

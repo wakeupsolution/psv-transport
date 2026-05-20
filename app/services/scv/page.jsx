@@ -15,7 +15,7 @@ const scvVehicles = [
     description:
       "The ideal compact truck for navigating narrow city streets. Perfect for FMCG distribution, e-commerce parcel deliveries, and daily intra-city logistics with excellent fuel efficiency.",
     body_type: "Open and Closed",
-    size_range: "7 ft to 10 ft",
+    size_range: "10ft - 2tons",
     payload_range: "Up to 2 Tons",
     variants: [
       "7 ft (L) × 4.5 ft (W) × 6 ft (H) | Payload: Up to 1 Ton",
@@ -93,7 +93,7 @@ export default function SCVSegmentPage() {
                   </div>
                   <div>
                     <p className="text-gray-500 text-[11px] uppercase tracking-[2px] font-bold">
-                      Length Range
+                      Max Range
                     </p>
                     <h4 className="text-[#fe0000] text-lg font-extrabold">
                       {vehicle.size_range}
@@ -102,15 +102,14 @@ export default function SCVSegmentPage() {
                 </div>
               </div>
 
-              {/* Description */}
-              <p className="text-black-600 text-sm sm:text-base mb-6 leading-relaxed text-left">
+              {/* <p className="text-black-600 text-sm sm:text-base mb-6 leading-relaxed text-left">
                 {vehicle.description}
-              </p>
+              </p> */}
 
               {/* Simplified Layout Dimensions Line List */}
               <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm mb-6 text-left">
                 <h4 className="text-xs font-bold text-slate-1200 uppercase tracking-wider mb-3">
-                  Available Fleet Layouts
+                  Payload & Dimension Options
                 </h4>
                 <ul className="space-y-2.5">
                   {vehicle.variants.map((variant, idx) => (

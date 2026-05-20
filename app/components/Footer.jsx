@@ -108,7 +108,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services/icv"
+                  href="/services/Flatbed"
                   className="hover:text-red-500 transition-colors"
                 >
                   Flatbed Trailers
@@ -116,7 +116,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services/scv"
+                  href="/services/Semibed "
                   className="hover:text-red-500 transition-colors"
                 >
                   Semibed Trailers
@@ -124,7 +124,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services/scv"
+                  href="/services/Lowbed"
                   className="hover:text-red-500 transition-colors"
                 >
                   Lowbed Trailers
@@ -132,7 +132,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services/scv"
+                  href="/services/Hydraulic"
                   className="hover:text-red-500 transition-colors"
                 >
                   Hydraulic Trailers
