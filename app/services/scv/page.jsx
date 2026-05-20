@@ -110,18 +110,18 @@ export default function SCVSegmentPage() {
                 {/* Badge & Title */}
                 <div className="mb-6">
                 
-                  <h2 className="text-3xl md:text-4xl font-bold red-500 mb-2">
+                  <h2 className="text-3xl md:text-4xl font-bold text-left red-500 mb-2">
                     {vehicle.name}
                   </h2>
                   <div className="space-y-2">
 
-  <p className="text-white/80 text-[11px] md:text-xs uppercase tracking-[4px] font-bold">
-    Body Type
-  </p>
+                  <p className="text-white/80 text-[11px] md:text-xs uppercase tracking-[4px] font-bold">
+                    Body Type
+                  </p>
 
-  <h4 className="text-red-500 text-2xl md:text-3xl font-black leading-tight">
-    {vehicle.body_type}
-  </h4>
+                  <h4 className="text-red-500 text-2xl md:text-3xl font-black leading-tight">
+                    {vehicle.body_type}
+                  </h4>
 
   
 
@@ -198,7 +198,7 @@ export default function SCVSegmentPage() {
             Payload Capacity
           </p>
 
-          <div className="inline-flex items-center bg-[#0000fe]/10 text-[#0000fe] px-4 py-2 rounded-full font-bold text-sm">
+          <div className="inline-flex items-center bg-[#0000fe]/10 text-[#0000fe] px-4 py-2 rounded-full font-bold text-sm whitespace-nowrap">
             {spec.payload}
           </div>
 
