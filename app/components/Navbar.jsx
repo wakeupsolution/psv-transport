@@ -208,7 +208,7 @@ const Navbar = () => {
             <div
               className={`pl-4 overflow-hidden transition-all duration-300 ease-in-out ${isMobileServicesOpen ? "max-h-48 mt-3" : "max-h-0"}`}
             >
-              <div className="flex flex-col space-y-3 border-l-2 border-slate-100 pl-4">
+              <div className="flex flex-col space-y-3 border-l-2 border-slate-100 pl-4  max-h-40 overflow-y-auto">
                 {segments.map((s) => (
                   <Link
                     key={s.name}
