@@ -32,7 +32,7 @@ const semibedVehicles = [
       "Heavy-Duty Multi-Axle Systems",
       "High-Tensile Lash Anchors",
     ],
-    image: "/serviceimage/g16.jpg", // Update with your actual Semibed Trailer image path
+    image: "/serviceimage/Semibed Trailer.jpg.jpeg", // Update with your actual Semibed Trailer image path
   },
 ];
 

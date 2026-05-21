@@ -32,7 +32,7 @@ const trailerVehicles = [
       "Reinforced High-Tensile Steel Bed",
       "Extendable Chassis Options",
     ],
-    image: "/serviceimage/g8.jpg", // Update with your actual Flatbed Trailer image path
+    image: "/serviceimage/Flatbed Trailers.jpg.jpeg", // Update with your actual Flatbed Trailer image path
   },
 ];
 

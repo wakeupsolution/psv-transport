@@ -47,7 +47,7 @@ const Navbar = () => {
           <div className="flex-shrink-0 z-50">
             <Link href="/">
               <img
-                src="/color logo.png"
+                src="/newlogo.png"
                 alt="Logo"
                 className="h-12 md:h-16 w-auto"
               />

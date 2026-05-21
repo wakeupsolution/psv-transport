@@ -26,7 +26,7 @@ const hydraulicVehicles = [
       "Designed for power transformers, wind turbine components, heavy reactors, and mega structural casting blocks"
     ],
     special_features: ["Modular Spacer Beams", "Hydraulic Leveling & Suspension", "All-Axle Synchronized Steering", "High-Tensile Load Distribution"],
-    image: "/serviceimage/g4.jpg", // Update with your actual Hydraulic Axle Trailer image path
+    image: "/serviceimage/Hydraulic Axle.jpg.jpeg", // Update with your actual Hydraulic Axle Trailer image path
   }
 ];
 

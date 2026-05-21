@@ -33,7 +33,7 @@ const odcVehicles = [
       "Reinforced Platform Chassis",
       "Ramp Support Architecture",
     ],
-    image: "/serviceimage/g15.jpg", // Update with your actual ODC/Platform truck image path
+    image: "/serviceimage/ODC Trucks.jpg.jpeg", // Update with your actual ODC/Platform truck image path
   },
 ];
 
