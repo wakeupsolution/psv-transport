@@ -33,7 +33,7 @@ export default function SCVSegmentPage() {
       <div className="relative bg-slate-900 border-b border-gray-200 shadow-sm mb-12 md:mb-16 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2000&auto=format&fit=crop"
+            src="/serviceimage/alterimage.jpg.jpeg"
             className="w-full h-full object-cover opacity-40"
             alt="SCV Background"
           />

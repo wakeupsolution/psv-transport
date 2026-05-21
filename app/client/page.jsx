@@ -70,7 +70,7 @@ export default function ClientsPage() {
       <div className="relative min-h-[50vh] flex items-center justify-center bg-slate-900 overflow-hidden border-b border-slate-800">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2000&auto=format&fit=crop"
+            src="/serviceimage/alterimage.jpg.jpeg"
             className="w-full h-full object-cover opacity-20"
             alt="Logistics Background"
           />

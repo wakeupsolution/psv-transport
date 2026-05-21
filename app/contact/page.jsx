@@ -50,7 +50,7 @@ export default function ContactPage() {
       <div className="relative w-full h-[55vh] min-h-[450px] flex flex-col items-center justify-center pt-10">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2000&auto=format&fit=crop"
+            src="/serviceimage/alterimage.jpg.jpeg"
             alt="Logistics Fleet"
             className="w-full h-full object-cover"
           />

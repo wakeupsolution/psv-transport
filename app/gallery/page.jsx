@@ -39,7 +39,7 @@ export default function GalleryPage() {
       <div className="relative bg-slate-900 overflow-hidden border-b border-slate-800">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2000&auto=format&fit=crop" 
+            src="/serviceimage/alterimage.jpg.jpeg" 
             /* 1. Changed opacity-20 to opacity-50 to make the image brighter */
             className="w-full h-full object-cover opacity-50"
             alt="Gallery Background"
