@@ -63,11 +63,11 @@ export default function HomePage() {
   const serviceData = [
     {
       id: 1,
-      title: "HCV Segment",
-      desc: "Heavy Commercial Vehicles for massive loads.",
-      img: "/serviceimage/g4.jpg",
+      title: "SCV Segment",
+      desc: "Small Commercial Vehicles for last-mile delivery.",
+      img: "/serviceimage/g1.jpg",
       colSpan: "lg:col-span-1",
-      link: "/services/hcv",
+      link: "/services/scv",
     },
     {
       id: 2,
@@ -79,27 +79,28 @@ export default function HomePage() {
     },
     {
       id: 3,
-      title: "ICV Segment",
-      desc: "Intermediate Commercial Vehicles for regional distribution.",
-      img: "/serviceimage/g10.jpg",
+      title: "HCV Segment",
+      desc: "Heavy Commercial Vehicles for massive loads.",
+      img: "/serviceimage/g4.jpg",
       colSpan: "lg:col-span-1",
-      link: "/services/icv",
+      link: "/services/hcv",
     },
+
     {
       id: 4,
-      title: "SCV Segment",
-      desc: "Small Commercial Vehicles for last-mile delivery.",
-      img: "/serviceimage/g1.jpg",
+      title: "ODC Trucks",
+      desc: "Specialized Project & Heavy Machinery Logistics.",
+      img: "/serviceimage/ODC Trucks.jpg.jpeg",
       colSpan: "lg:col-span-1",
-      link: "/services/scv",
+      link: "/services/odc",
     },
     {
       id: 5,
-      title: "Trailer Segment",
-      desc: "Customizable trailers for specialized ODC transport.",
-      img: "/serviceimage/g13.jpg",
+      title: "Flatbed Trailers",
+      desc: "High-Capacity Heavy Industrial Transit",
+      img: "/serviceimage/Flatbed Trailers.jpg.jpeg",
       colSpan: "lg:col-span-1",
-      link: "/services/trailer",
+      link: "/services/Flatbed",
     },
   ];
   const reviews = [
