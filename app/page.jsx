@@ -44,20 +44,20 @@ export default function HomePage() {
       desktopImg: "/banner/desktopbanner1.png", // Wide image
       mobileImg: "/banner/mobilebanner1.png", // Tall image
     },
-    {
-      id: 2,
-      title: "SPECIALIZED ODC MOVEMENT",
-      sub: " Handling up to 100 tons with precision.",
-      desktopImg: "/banner/desktopbanner2.png",
-      mobileImg: "/banner/mobilebanner2.png",
-    },
-    {
-      id: 3,
-      title: "PAN INDIA CONNECTIVITY",
-      sub: "Seamless transport between airport, seaport, and factory.",
-      desktopImg: "/banner/desktopbanner3.png",
-      mobileImg: "/banner/mobilebanner3.png",
-    },
+    // {
+    //   id: 2,
+    //   title: "SPECIALIZED ODC MOVEMENT",
+    //   sub: " Handling up to 100 tons with precision.",
+    //   desktopImg: "/banner/desktopbanner2.png",
+    //   mobileImg: "/banner/mobilebanner2.png",
+    // },
+    // {
+    //   id: 3,
+    //   title: "PAN INDIA CONNECTIVITY",
+    //   sub: "Seamless transport between airport, seaport, and factory.",
+    //   desktopImg: "/banner/desktopbanner3.png",
+    //   mobileImg: "/banner/mobilebanner3.png",
+    // },
   ];
 
   const serviceData = [

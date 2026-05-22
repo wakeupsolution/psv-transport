@@ -138,10 +138,10 @@ export default function ClientsPage() {
             {/* Stat 2 */}
             <div className="md:border-x border-slate-800 py-6 md:py-0">
               <p className="text-5xl md:text-6xl font-black text-white leading-none">
-                <AnimatedNumber value="99%" />
+                <AnimatedNumber value="150+" />
               </p>
               <p className="text-red-600 font-bold uppercase tracking-widest text-[9px] mt-2">
-                Retention
+                Associated partners
               </p>
             </div>
 

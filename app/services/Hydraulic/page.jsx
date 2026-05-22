@@ -95,14 +95,11 @@ export default function HydraulicAxlesPage() {
                       Up to 144 Tons
                     </h4>
                   </div>
-                  <div>
-                    <p className="text-gray-500 text-[11px] uppercase tracking-[2px] font-bold">
-                      Platform Width Base
-                    </p>
-                    <h4 className="text-red-500 text-base font-extrabold">
-                      10 Feet Extended Deck
-                    </h4>
-                  </div>
+                 <div className="flex items-center">
+  <span className="inline-flex items-center px-4 py-2 rounded-full bg-[#fe0000]/10 border border-[#fe0000]/20 text-[#fe0000] text-sm font-bold tracking-wide">
+    Equipped for ODC Loads
+  </span>
+</div>
                 </div>
               </div>
               
