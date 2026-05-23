@@ -15,13 +15,13 @@ const lcvVehicles = [
     description:
       "Our medium-duty Light Commercial Vehicle fleet is engineered to bridge the gap between intra-city distribution and long-haul logistics. Designed for excellent turnaround times and optimal fuel efficiency, these trucks provide superior chassis stability and higher volume configurations for safely transporting FMCG, white goods, industrial cargo, and manufacturing materials.",
     body_type: "Open and Closed",
-    size_range: "32 ft - 9 Tons",
+    size_range: "32 ft & 9 Tons",
     variants: [
       "14 ft (L) × 6 ft (W) × 7 ft (H) | Payload: Up to 3.5 Tons",
       "17 ft (L) × 6 ft (W) × 7 ft (H) | Payload: Up to 5 Tons",
       "19 ft (L) × 7 ft (W) × 7 ft (H) | Payload: Up to 7.5 Tons",
       "20 ft (L) × 7 ft (W) × 7 ft (H) | Payload: Up to 7.5 Tons",
-      "32 ft (L) × 8 ft (W) × 8 ft (H) | Payload: Up to 9 Tons",
+      "20-32 ft (L) × 8 ft (W) × 8 ft (H) | Payload: Up to 9 Tons",
     ],
     popular_models: ["Eicher", "TATA", "Ashok Leyland", "Mahindra"],
     image: "/serviceimage/g7.jpg",

@@ -24,12 +24,11 @@ const odcVehicles = [
     ],
     configs_title: "payload & Dimension Options",
     variants: [
-      "20-24 Ft Open ODC: 20-24 ft (L) × 8+ ft (W) | Payload Capacity: 9 to 18 Tons",
-      "32 Ft Open JCB Flatbed: 32 ft (L) × 8+ ft (W) | Payload Capacity: 8 to 16 Tons",
+      " 20- ft (L) × 8+ ft (W) | Payload Capacity: 9 to 18 Tons",
+      "32 ft (L) × 8+ ft (W) | Payload Capacity: 8 to 16 Tons",
     ],
     special_features: [
-      "Extended Deck Width (8ft+)",
-      "Heavy-Duty Tie-Down Anchors",
+      "Detachable Body Frame",
       "Reinforced Platform Chassis",
       "Ramp Support Architecture",
     ],
@@ -99,16 +98,13 @@ export default function ODCSegmentPage() {
                       Common Nomenclature
                     </p>
                     <h4 className="text-gray-900 text-base font-extrabold">
-                      Platform & Flatbed Trucks
+                      Platform Jcb Trucks
                     </h4>
                   </div>
-                  <div>
-                    <p className="text-gray-500 text-[11px] uppercase tracking-[2px] font-bold">
-                      Deck Clearance Width
-                    </p>
-                    <h4 className="text-red-500 text-base font-extrabold">
-                      Expanded 8+ Feet Deck
-                    </h4>
+                 <div className="flex items-center">
+                    <span className="inline-flex items-center px-4 py-2 rounded-full bg-[#fe0000]/10 border border-[#fe0000]/20 text-[#fe0000] text-sm font-bold tracking-wide">
+                      Equipped for ODC Loads
+                    </span>
                   </div>
                 </div>
               </div>

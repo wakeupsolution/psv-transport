@@ -17,7 +17,7 @@ const trailerVehicles = [
     trailer_type: "Extended Flatbed Platform",
     configs_title: "Available Trailer Configurations",
     variants: [
-      "40-80 ft (L) × 8 ft (W) × 8 ft (H) | Payload Capacity: Up to 40 Tons",
+      "40 to 80 ft (L) × 8 ft (W) × 8 ft (H) | Payload Capacity: Up to 40 Tons",
     ],
     capabilities_title: "Key Cargo Capabilities",
     capabilities: [
@@ -27,10 +27,10 @@ const trailerVehicles = [
       "Designed for long-length structural steel, heavy plates, and factory equipment infrastructure",
     ],
     special_features: [
-      "Multi-Axle Air Suspension",
+      "Heavy Duty Mechanical",
       "Heavy Twist Locks for Containers",
       "Reinforced High-Tensile Steel Bed",
-      "Extendable Chassis Options",
+      "Leaf Spring Suspension",
     ],
     image: "/serviceimage/Flatbed Trailers.jpg.jpeg", // Update with your actual Flatbed Trailer image path
   },
@@ -87,9 +87,14 @@ export default function FlatbedTrailersPage() {
             <div className="w-full lg:w-1/2 flex flex-col justify-center text-left">
               {/* Badge & Title */}
               <div className="mb-4 text-left">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 text-left">
-                  {vehicle.name}
-                </h2>
+                <div className="flex items-center justify-between">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 text-left">
+                    {vehicle.name}
+                  </h2>
+                  <span className="inline-flex items-center px-4 py-2 rounded-full bg-[#fe0000]/10 border border-[#fe0000]/20 text-[#fe0000] text-sm font-bold tracking-wide">
+                    Equipped for ODC Loads
+                  </span>
+                </div>
 
                 <div className="grid grid-cols-2 gap-4 border-t border-b border-gray-200 py-4 my-4 text-left">
                   <div>

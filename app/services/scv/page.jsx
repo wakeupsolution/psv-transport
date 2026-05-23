@@ -15,7 +15,7 @@ const scvVehicles = [
     description:
       "The ideal compact truck for navigating narrow city streets. Perfect for FMCG distribution, e-commerce parcel deliveries, and daily intra-city logistics with excellent fuel efficiency.",
     body_type: "Open and Closed",
-    size_range: "10ft - 2tons",
+    size_range: "10ft & 2tons",
     payload_range: "Up to 2 Tons",
     variants: [
       "7 ft (L) × 4.5 ft (W) × 6 ft (H) | Payload: Up to 1 Ton",

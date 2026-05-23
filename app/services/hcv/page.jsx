@@ -14,7 +14,7 @@ const hcvVehicles = [
     service: "Bulk Transit & High-Tonnage Logistics",
     // description:
     //   "Engineered for heavy industrial shipping and massive corporate payload demands. Our Heavy Commercial Vehicle fleet offers high-torque performance, robust multi-axle chassis configurations, and maximum cargo integrity. Optimized to easily handle large-scale manufacturing output, raw materials, industrial machinery, and bulk retail supply chains out of Chennai's top industrial corridors.",
-    size_range: "32 ft - 40 Tons",
+    size_range: "20 ft - 32 ft",
 
     // Closed & Open Configurations
     standard_title: "Open & Closed Configurations (6 to 10 Tyre)",
