@@ -95,7 +95,7 @@ const Footer = () => {
                   href="/services/hcv"
                   className="hover:text-red-500 transition-colors"
                 >
-                  HCV Segment
+                  HCV Trucks
                 </Link>
               </li>
               <li>

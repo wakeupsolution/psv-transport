@@ -24,8 +24,8 @@ const odcVehicles = [
     ],
     configs_title: "payload & Dimension Options",
     variants: [
-      " 20- ft (L) × 8+ ft (W) | Payload Capacity: 9 to 18 Tons",
-      "32 ft (L) × 8+ ft (W) | Payload Capacity: 8 to 16 Tons",
+      " 20- 24 ft (L) × 8+ ft (W) | Payload Capacity: 9 to 18 Tons",
+      "28-32 ft (L) × 8+ ft (W) | Payload Capacity: 8 to 16 Tons",
     ],
     special_features: [
       "Detachable Body Frame",
@@ -44,7 +44,7 @@ export default function ODCSegmentPage() {
         <div className="absolute inset-0 z-0">
           <img
             src="/serviceimage/alterimage.jpg.jpeg"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-50"
             alt="ODC Platform Fleet Background"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/70 to-slate-900/80"></div>
@@ -98,7 +98,7 @@ export default function ODCSegmentPage() {
                       Common Nomenclature
                     </p>
                     <h4 className="text-gray-900 text-base font-extrabold">
-                      Platform Jcb Trucks
+                      Between Platform and Jcb Trucks
                     </h4>
                   </div>
                  <div className="flex items-center">

@@ -56,9 +56,9 @@ export default function HCVSegmentPage() {
       <div className="relative bg-slate-900 border-b border-gray-200 shadow-sm mb-12 md:mb-16 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000&auto=format&fit=crop"
-            className="w-full h-full object-cover opacity-40"
-            alt="HCV Fleet Background"
+            src="/serviceimage/alterimage.jpg.jpeg"
+            className="w-full h-full object-cover opacity-50"
+            alt="Lowbed Trailers Fleet Background"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/70 to-slate-900/80"></div>
         </div>

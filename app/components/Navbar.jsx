@@ -26,9 +26,9 @@ const Navbar = () => {
   }, [pathname]);
 
   const segments = [
-    { name: "SCV Segment", href: "/services/scv" },
-    { name: "LCV Segment", href: "/services/lcv" },
-    { name: "HCV Segment", href: "/services/hcv" },
+    { name: "SCV Trucks", href: "/services/scv" },
+    { name: "LCV Trucks", href: "/services/lcv" },
+    { name: "HCV Trucks", href: "/services/hcv" },
     { name: "ODC Trucks", href: "/services/odc" },
     { name: "Flatbed Trailers", href: "/services/Flatbed" },
     { name: "Semibed Trailers", href: "/services/Semibed" },

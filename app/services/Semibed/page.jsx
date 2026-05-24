@@ -17,7 +17,7 @@ const semibedVehicles = [
     trailer_type: "Lowered Semibed Platform",
     configs_title: "Available Trailer Configurations",
     variants: [
-      "40-ft(L) × 9 ft (W) × 9 ft (H) | Payload Capacity: Up to 40 Tons",
+      "40- 50 ft(L) × 9 ft (W) × 9 ft (H) | Payload Capacity: Up to 40 Tons",
     ],
     capabilities_title: "Key Cargo Capabilities",
     capabilities: [
@@ -34,32 +34,32 @@ const semibedVehicles = [
     ],
     image: "/serviceimage/Semibed Trailer.jpg.jpeg", // Update with your actual Semibed Trailer image path
   },
-    {
-    id: 1,
-    name: "Semibed Trailers",
-    service: "Heavy Duty Industrial & Point Load Transport",
-    description:
-      "Engineered specifically to support ultra-heavy structural distributions that demand a lowered center of gravity and optimized vertical clearance. Our semibed trailer fleet features exceptional structural reinforcement, making it the premier choice for handling high-density point load items, manufacturing dies, transformers, structural blocks, and over-dimensional machinery out of Chennai's top industrial zones.",
-    trailer_type: "Lowered Semibed Platform",
-    configs_title: "Available Trailer Configurations",
-    variants: [
-      "50-ft(L) × 9 ft (W) × 9 ft (H) | Payload Capacity: Up to 40 Tons",
-    ],
-    capabilities_title: "Key Cargo Capabilities",
-    capabilities: [
-      "Easily accommodates Over-Dimensional Cargoes (ODC)",
-      "Engineered to withstand intense, concentrated Point Load Items",
-      "Optimized deck height for tall out-of-gauge equipment",
-      "Perfect for industrial infrastructure, casting molds, transformers, and heavy engineering blocks",
-    ],
-    special_features: [
-      "Low-Profile Clearance Deck",
-      "Concentrated Point-Load Bracing",
-      "Heavy-Duty Multi-Axle Systems",
-      "High-Tensile Lash Anchors",
-    ],
-    image: "/serviceimage/Semibed Trailer.jpg.jpeg", // Update with your actual Semibed Trailer image path
-  },
+  //   {
+  //   id: 2,
+  //   // name: "Semibed Trailers",
+  //   service: "Heavy Duty Industrial & Point Load Transport",
+  //   description:
+  //     "Engineered specifically to support ultra-heavy structural distributions that demand a lowered center of gravity and optimized vertical clearance. Our semibed trailer fleet features exceptional structural reinforcement, making it the premier choice for handling high-density point load items, manufacturing dies, transformers, structural blocks, and over-dimensional machinery out of Chennai's top industrial zones.",
+  //   trailer_type: "Lowered Semibed Platform",
+  //   configs_title: "Available Trailer Configurations",
+  //   variants: [
+  //     "50-ft(L) × 9 ft (W) × 9 ft (H) | Payload Capacity: Up to 50 Tons",
+  //   ],
+  //   capabilities_title: "Key Cargo Capabilities",
+  //   capabilities: [
+  //     "Easily accommodates Over-Dimensional Cargoes (ODC)",
+  //     "Engineered to withstand intense, concentrated Point Load Items",
+  //     "Optimized deck height for tall out-of-gauge equipment",
+  //     "Perfect for industrial infrastructure, casting molds, transformers, and heavy engineering blocks",
+  //   ],
+  //   special_features: [
+  //     "Low-Profile Clearance Deck",
+  //     "Concentrated Point-Load Bracing",
+  //     "Heavy-Duty Multi-Axle Systems",
+  //     "High-Tensile Lash Anchors",
+  //   ],
+  //   image: "/serviceimage/Semibed Trailer.jpg.jpeg", // Update with your actual Semibed Trailer image path
+  // },
 ];
 
 export default function SemibedTrailersPage() {
@@ -70,7 +70,7 @@ export default function SemibedTrailersPage() {
         <div className="absolute inset-0 z-0">
           <img
             src="/serviceimage/alterimage.jpg.jpeg"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-50"
             alt="Semibed Trailers Fleet Background"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/70 to-slate-900/80"></div>

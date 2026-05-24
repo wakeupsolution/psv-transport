@@ -60,49 +60,72 @@ export default function HomePage() {
     // },
   ];
 
-  const serviceData = [
-    {
-      id: 1,
-      title: "SCV Segment",
-      desc: "Small Commercial Vehicles for last-mile delivery.",
-      img: "/serviceimage/g1.jpg",
-      colSpan: "lg:col-span-1",
-      link: "/services/scv",
-    },
-    {
-      id: 2,
-      title: "LCV Segment",
-      desc: "Light Commercial Vehicles for faster city transit.",
-      img: "/serviceimage/g7.jpg",
-      colSpan: "lg:col-span-1",
-      link: "/services/lcv",
-    },
-    {
-      id: 3,
-      title: "HCV Segment",
-      desc: "Heavy Commercial Vehicles for massive loads.",
-      img: "/serviceimage/g4.jpg",
-      colSpan: "lg:col-span-1",
-      link: "/services/hcv",
-    },
-
-    {
-      id: 4,
-      title: "ODC Trucks",
-      desc: "Specialized Project & Heavy Machinery Logistics.",
-      img: "/serviceimage/ODC Trucks.jpg.jpeg",
-      colSpan: "lg:col-span-1",
-      link: "/services/odc",
-    },
-    {
-      id: 5,
-      title: "Flatbed Trailers",
-      desc: "High-Capacity Heavy Industrial Transit",
-      img: "/serviceimage/Flatbed Trailers.jpg.jpeg",
-      colSpan: "lg:col-span-1",
-      link: "/services/Flatbed",
-    },
-  ];
+const serviceData = [
+  {
+    id: 1,
+    title: "SCV Trucks",
+    desc: "Small Commercial Vehicles for last-mile delivery.",
+    img: "/serviceimage/g1.jpg",
+    colSpan: "lg:col-span-1",
+    link: "/services/scv",
+  },
+  {
+    id: 2,
+    title: "LCV Trucks",
+    desc: "Light Commercial Vehicles for faster city transit.",
+    img: "/serviceimage/g7.jpg",
+    colSpan: "lg:col-span-1",
+    link: "/services/lcv",
+  },
+  {
+    id: 3,
+    title: "HCV Trucks",
+    desc: "Heavy Commercial Vehicles for massive loads.",
+    img: "/serviceimage/g4.jpg",
+    colSpan: "lg:col-span-1",
+    link: "/services/hcv",
+  },
+  {
+    id: 4,
+    title: "ODC Trucks",
+    desc: "Specialized Project & Heavy Machinery Logistics.",
+    img: "/serviceimage/ODC Trucks.jpg.jpeg",
+    colSpan: "lg:col-span-1",
+    link: "/services/odc",
+  },
+  {
+    id: 5,
+    title: "Flatbed Trailers",
+    desc: "High-Capacity Heavy Industrial Transit",
+    img: "/serviceimage/Flatbed Trailers.jpg.jpeg",
+    colSpan: "lg:col-span-1",
+    link: "/services/Flatbed",
+  },
+  {
+    id: 6,
+    title: "Semibed Trailers",
+    desc: "Efficient transport for oversized cargo.",
+    img: "/serviceimage/Semibed Trailer.jpg.jpeg",
+    colSpan: "lg:col-span-1",
+    link: "/services/Semibed",
+  },
+  {
+    id: 7,
+    title: "Lowbed Trailers",
+    desc: "Heavy-duty lowbed logistics solutions.",
+    img: "/serviceimage/low.jpg.jpeg",
+    colSpan: "lg:col-span-1",
+    link: "/services/Lowbed",
+  },
+  {
+    id: 8,
+    title: "Hydraulic Trailers",
+    desc: "Advanced hydraulic axle transportation.",
+    img: "/serviceimage/Hydraulic Axle.jpg.jpeg",
+    colSpan: "lg:col-span-1",
+    link: "/services/Hydraulic",
+  },
+];
   const reviews = [
     {
       id: 1,
@@ -465,7 +488,7 @@ export default function HomePage() {
           </div>
 
           {/* 3-Column Grid Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* First 5 cards: The Services */}
             {serviceData.map((srv) => (
               <div
@@ -531,80 +554,7 @@ export default function HomePage() {
             ))}
 
             {/* THE 6TH CARD: Quick Enquiry Form */}
-            <div className="relative bg-white rounded-[2rem] overflow-hidden shadow-xl border border-slate-100 p-8 flex flex-col min-h-[350px] md:min-h-[400px]">
-              {/* Background Accent */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-bl-[100px] z-0"></div>
-
-              <div className="relative z-10 flex-1 flex flex-col">
-                {/* Header */}
-                <div className="mb-6">
-                  <div className="w-12 h-12 bg-red-100 rounded-2xl flex items-center justify-center mb-4 text-red-600">
-                    <svg
-                      className="w-6 h-6"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-
-                  <h3 className="text-2xl font-black text-slate-900 tracking-tight mb-2">
-                    Need a Custom Fleet?
-                  </h3>
-
-                  <p className="text-slate-500 text-sm font-medium">
-                    Get an instant quote for your logistical needs.
-                  </p>
-                </div>
-
-                {/* Form */}
-                <form
-                  onSubmit={handleCallbackSubmit}
-                  className="mt-auto space-y-3"
-                >
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    placeholder="Your Name"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-red-600/20 focus:border-red-600"
-                  />
-
-                  <input
-                    type="tel"
-                    name="phone"
-                    required
-                    placeholder="Phone Number"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-red-600/20 focus:border-red-600"
-                  />
-
-                  <button
-                    type="submit"
-                    disabled={status === "submitting"}
-                    className="w-full bg-slate-900 hover:bg-red-600 text-white font-bold py-3.5 rounded-xl text-[11px] uppercase tracking-widest transition-all shadow-md active:scale-[0.98] disabled:opacity-50"
-                  >
-                    {status === "submitting"
-                      ? "Sending..."
-                      : "Request Callback"}
-                  </button>
-
-                  {/* Status Messages */}
-                  {status === "success" && (
-                    <p className="text-green-600 text-xs">
-                      ✅ Request sent successfully!
-                    </p>
-                  )}
-
-                  {status === "error" && (
-                    <p className="text-red-600 text-xs">
-                      ❌ Something went wrong. Try again.
-                    </p>
-                  )}
-                </form>
-              </div>
-            </div>
+   
           </div>
         </div>
       </section>
