@@ -50,7 +50,7 @@ export default function ODCSegmentPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/70 to-slate-900/80"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 text-center">
-          <span className="text-[#0000fe] font-bold tracking-widest uppercase text-xs md:text-sm mb-3 block">
+          <span className="text-[#ffffff] font-bold tracking-widest uppercase text-xs md:text-sm mb-3 block">
             Specialized Fleet Overview
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">

@@ -55,7 +55,7 @@ export default function ICVSegmentPage() {
 
   {/* Content Layer */}
   <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-    <span className="text-[#0000fe] font-bold tracking-widest uppercase text-sm mb-3 block">
+    <span className="text-[#ffffff] font-bold tracking-widest uppercase text-sm mb-3 block">
       Fleet Overview
     </span>
     <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
@@ -98,7 +98,7 @@ export default function ICVSegmentPage() {
                 {/* Badges & Title */}
                 <div className="mb-6">
                   <div className="flex flex-wrap gap-3 mb-4">
-                    <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#0000fe]/10 text-[#0000fe] font-semibold text-xs tracking-wider uppercase">
+                    <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#0000fe]/10 text-[#ffffff] font-semibold text-xs tracking-wider uppercase">
                       Payload: {vehicle.specs.payload}
                     </div>
                     {vehicle.odcCapable && (
@@ -131,15 +131,15 @@ export default function ICVSegmentPage() {
                   <div className="grid grid-cols-3 gap-6">
                     <div>
                       <span className="block text-xs uppercase tracking-wider text-gray-500 mb-1">Length</span>
-                      <span className="block text-xl font-bold text-[#0000fe]">{vehicle.specs.length}</span>
+                      <span className="block text-xl font-bold text-[#ffffff]">{vehicle.specs.length}</span>
                     </div>
                     <div>
                       <span className="block text-xs uppercase tracking-wider text-gray-500 mb-1">Width</span>
-                      <span className="block text-xl font-bold text-[#0000fe]">{vehicle.specs.width}</span>
+                      <span className="block text-xl font-bold text-[#ffffff]">{vehicle.specs.width}</span>
                     </div>
                     <div>
                       <span className="block text-xs uppercase tracking-wider text-gray-500 mb-1">Height</span>
-                      <span className="block text-xl font-bold text-[#0000fe]">{vehicle.specs.height}</span>
+                      <span className="block text-xl font-bold text-[#ffffff]">{vehicle.specs.height}</span>
                     </div>
                   </div>
                 </div>
