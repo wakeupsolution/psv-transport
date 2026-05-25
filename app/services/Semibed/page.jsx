@@ -69,7 +69,7 @@ export default function SemibedTrailersPage() {
       <div className="relative bg-slate-900 border-b border-gray-200 shadow-sm mb-12 md:mb-16 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/serviceimage/alterimage.jpg.jpeg"
+            src="/serviceimage/ser3.jpg.jpeg"
             className="w-full h-full object-cover opacity-50"
             alt="Semibed Trailers Fleet Background"
           />
