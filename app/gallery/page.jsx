@@ -40,8 +40,8 @@ export default function GalleryPage() {
         <div className="absolute inset-0 z-0">
           <img 
             src="/serviceimage/alterimage.jpg.jpeg" 
-            /* 1. Changed opacity-20 to opacity-50 to make the image brighter */
-            className="w-full h-full object-cover opacity-50"
+            /* 1. Changed opacity-20 to opacity-70 to make the image brighter */
+            className="w-full h-full object-cover opacity-70"
             alt="Gallery Background"
           />
           {/* 2. Lightened the top of the gradient from 60% dark to 20% dark */}

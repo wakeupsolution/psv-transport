@@ -44,7 +44,7 @@ export default function FlatbedTrailersPage() {
         <div className="absolute inset-0 z-0">
           <img
             src="/serviceimage/alterimage.jpg.jpeg"
-            className="w-full h-full object-cover opacity-50"
+            className="w-full h-full object-cover opacity-70"
             alt="Flatbed Trailers Fleet Background"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/70 to-slate-900/80"></div>

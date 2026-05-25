@@ -499,7 +499,7 @@ const serviceData = [
                 <Image
                   src={srv.img}
                   fill
-                  className="object-cover transition-transform duration-1000 ease-in-out group-hover:scale-110 opacity-70 group-hover:opacity-50"
+                  className="object-cover transition-transform duration-1000 ease-in-out group-hover:scale-110 opacity-70 group-hover:opacity-70"
                   alt={srv.title}
                 />
 
