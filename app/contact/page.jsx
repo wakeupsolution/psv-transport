@@ -50,7 +50,7 @@ export default function ContactPage() {
       <div className="relative w-full h-[55vh] min-h-[450px] flex flex-col items-center justify-center pt-10">
         <div className="absolute inset-0 z-0">
           <img
-            src="/serviceimage/alterimage.jpg.jpeg"
+            src="/serviceimage/ser11.jpg.jpeg"
             alt="Logistics Fleet"
             className="w-full h-full object-cover"
           />
@@ -290,7 +290,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={formStatus === "submitting"}
-                  className="w-full bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-800 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all flex items-center justify-center gap-3 disabled:opacity-70 shadow-lg shadow-blue-600/30 text-lg uppercase tracking-wider"
+                  className="w-full bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-800 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all flex items-center justify-center gap-3 disabled:opacity-90 shadow-lg shadow-blue-600/30 text-lg uppercase tracking-wider"
                 >
                   {formStatus === "submitting"
                     ? "Processing..."

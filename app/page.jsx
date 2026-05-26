@@ -266,7 +266,7 @@ const serviceData = [
             <Image
               src={banners[currentBanner].desktopImg}
               fill
-              className="hidden md:block object-cover opacity-70"
+              className="hidden md:block object-cover opacity-90"
               alt="Industrial Banner Desktop"
               priority
             />
@@ -275,7 +275,7 @@ const serviceData = [
             <Image
               src={banners[currentBanner].mobileImg}
               fill
-              className="block md:hidden object-cover opacity-70"
+              className="block md:hidden object-cover opacity-90"
               alt="Industrial Banner Mobile"
               priority
             />
@@ -499,7 +499,7 @@ const serviceData = [
                 <Image
                   src={srv.img}
                   fill
-                  className="object-cover transition-transform duration-1000 ease-in-out group-hover:scale-110 opacity-70 group-hover:opacity-70"
+                  className="object-cover transition-transform duration-1000 ease-in-out group-hover:scale-110 opacity-90 group-hover:opacity-90"
                   alt={srv.title}
                 />
 

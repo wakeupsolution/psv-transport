@@ -6,16 +6,13 @@ import Image from "next/image";
 export default function ClientsPage() {
   const clientLogos = [
     { id: 1, src: "/client/cli1.jpg" },
-    { id: 2, src: "/client/cli2.jpg" },
-    { id: 3, src: "/client/cli3.jpg" },
-    { id: 4, src: "/client/cli4.jpg" },
-    { id: 5, src: "/client/cli5.jpg" },
+  
+  
     { id: 6, src: "/client/cli6.jpg" },
-    { id: 7, src: "/client/cli7.jpg" },
-    { id: 8, src: "/client/cli8.jpg" },
-    { id: 9, src: "/client/cli9.jpg" },
+   
+
     { id: 10, src: "/client/cli10.jpg" },
-    { id: 11, src: "/client/cli11.jpg" },
+   
   ];
   const AnimatedNumber = ({ value }) => {
     const [count, setCount] = React.useState(0);
@@ -70,8 +67,8 @@ export default function ClientsPage() {
       <div className="relative min-h-[50vh] flex items-center justify-center bg-slate-900 overflow-hidden border-b border-slate-800">
         <div className="absolute inset-0 z-0">
           <img
-            src="/serviceimage/alterimage.jpg.jpeg"
-            className="w-full h-full object-cover opacity-20"
+            src="/serviceimage/ser10.jpg.jpeg"
+            className="w-full h-full object-cover opacity-90"
             alt="Logistics Background"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/10 via-slate-900/10 to-slate-900/10"></div>

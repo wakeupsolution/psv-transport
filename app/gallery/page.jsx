@@ -4,11 +4,11 @@ import React, { useState, useEffect } from 'react';
 
 const galleryImages = [
   { id: 1, img: '/serviceimage/g1.jpg' },
-  { id: 2, img: '/serviceimage/g2.jpg' },
+    { id: 2, img: '/serviceimage/g2.jpg.jpeg' },
   { id: 3, img: '/serviceimage/g3.jpg' },
   { id: 4, img: '/serviceimage/g4.jpg' },
   { id: 5, img: '/serviceimage/g5.jpg' },
-  { id: 6, img: '/serviceimage/g6.jpg' },
+  { id: 6, img: '/serviceimage/g6.jpg.jpeg' },
   { id: 7, img: '/serviceimage/g7.jpg' },
   { id: 8, img: '/serviceimage/g8.jpg' },
   { id: 9, img: '/serviceimage/g9.jpg' },
@@ -16,7 +16,7 @@ const galleryImages = [
   { id: 11, img: '/serviceimage/g11.jpg' },
   { id: 12, img: '/serviceimage/g12.jpg' },
   { id: 13, img: '/serviceimage/g13.jpg' },
-  { id: 14, img: '/serviceimage/g14.jpg' },
+   { id: 14, img: '/serviceimage/g14.jpg.jpeg' },
   { id: 15, img: '/serviceimage/g15.jpg' },
 ];
 
@@ -39,9 +39,9 @@ export default function GalleryPage() {
       <div className="relative bg-slate-900 overflow-hidden border-b border-slate-800">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/serviceimage/alterimage.jpg.jpeg" 
-            /* 1. Changed opacity-20 to opacity-70 to make the image brighter */
-            className="w-full h-full object-cover opacity-70"
+            src="/serviceimage/ser9.jpg.jpeg" 
+            /* 1. Changed opacity-20 to opacity-90 to make the image brighter */
+            className="w-full h-full object-cover opacity-90"
             alt="Gallery Background"
           />
           {/* 2. Lightened the top of the gradient from 60% dark to 20% dark */}
@@ -49,9 +49,9 @@ export default function GalleryPage() {
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 text-center">
-          <div className="inline-block px-3 py-1 border border-red-600/30 bg-red-600/10 rounded mb-4 shadow-sm">
-            <span className="text-red-500 font-black uppercase text-xs tracking-[0.3em]">Fleet Showcase</span>
-          </div>
+          {/* <div className="inline-block px-3 py-1 border border-red-600/30 bg-red-600/10 rounded mb-4 shadow-sm">
+            <span className="text-white font-black uppercase text-xs tracking-[0.3em]">Fleet Showcase</span>
+          </div> */}
           {/* Added drop-shadow-lg to ensure the text stays readable over the brighter image */}
           <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-4 uppercase drop-shadow-lg">
             Pragadeesh <span className="text-red-600">Visuals</span>
