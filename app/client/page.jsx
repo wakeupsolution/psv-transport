@@ -12,7 +12,7 @@ export default function ClientsPage() {
     { id: 5, src: "/client/cli5jpg.jpeg" },
     { id: 6, src: "/client/cli6.jpg.jpeg" },
     { id: 7, src: "/client/cli7.jpg.jpeg" },
-    { id: 8, src: "/client/cli8.jpg.jpeg " },
+    { id: 8, src: "/client/cli8.jpg.jpeg" },
     { id: 9, src: "/client/cli9.jpg.jpeg" },
     { id: 10, src: "/client/cli10.jpg" },
     { id: 11, src: "/client/cli11.jpg.jpeg" },
