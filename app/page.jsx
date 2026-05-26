@@ -37,35 +37,35 @@ const AnimatedNumber = ({ value }) => {
 export default function HomePage() {
   // --- DATA ARRAYS ---
   const banners = [
-    {
-      id: 1,
-      title: "REDEFINING SURFACE TRANSPORT",
-      sub: "Delivering Speed, Safety & Reliability",
-      desktopImg: "/banner/desktopbanner1.png", // Wide image
-      mobileImg: "/banner/mobilebanner1.png", // Tall image
-    },
-    {
-      id: 2,
-      title: "SPECIALIZED ODC MOVEMENT",
-      sub: " Handling up to 100 tons with precision.",
-      desktopImg: "/banner/desktopbanner2.jpg.jpeg",
-      mobileImg: "/banner/mobilebanner2.jpg.jpeg",
-    },
-    {
-      id: 3,
-      title: "PAN INDIA CONNECTIVITY",
-      sub: "Seamless transport between airport, seaport, and factory.",
-      desktopImg: "/banner/desktopbanner3.jpg.jpeg",
-      mobileImg: "/banner/mobilebanner3.jpg.jpeg",
-    },
-     {
+  {
+    id: 1,
+    title: "REDEFINING SURFACE TRANSPORT",
+    sub: "Delivering Speed, Safety & Reliability",
+    desktopImg: "/banner/desktopbanner1.png",
+    mobileImg: "/banner/mobilebanner1.png",
+  },
+  {
+    id: 2,
+    title: "HCV TRUCKS & ODC TRUCKS",
+    sub: "Reliable heavy cargo transportation with safe and efficient handling.",
+    desktopImg: "/banner/desktopbanner2.jpg.jpeg",
+    mobileImg: "/banner/mobilebanner2.jpg.jpeg",
+  },
+  {
+    id: 3,
+    title: "FLATBED & SEMIBED TRAILERS",
+    sub: "Flexible trailer solutions for oversized and industrial cargo movement.",
+    desktopImg: "/banner/desktopbanner3.jpg.jpeg",
+    mobileImg: "/banner/mobilebanner3.jpg.jpeg",
+  },
+  {
     id: 4,
-    title: "HEAVY EQUIPMENT LOGISTICS",
-    sub: "Efficient transport solutions for industrial machinery.",
+    title: "LOWBED & HYDRAULIC AXLE TRAILERS",
+    sub: "Advanced transport support for heavy machinery and project cargo.",
     desktopImg: "/banner/desktopbanner4.jpg.jpeg",
     mobileImg: "/banner/mobilebanner4.jpg.jpeg",
   },
-  ];
+];
 
 const serviceData = [
   {
