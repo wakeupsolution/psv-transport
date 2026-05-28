@@ -4,20 +4,20 @@ import React, { useState, useEffect } from 'react';
 
 const galleryImages = [
   { id: 1, img: '/serviceimage/g1.jpg' },
-    { id: 2, img: '/serviceimage/g2.jpg.jpeg' },
-  { id: 3, img: '/serviceimage/g3.jpg' },
+    { id: 2, img: '/serviceimage/g2.jpg' },
+  { id: 3, img: '/serviceimage/g3.avif' },
   { id: 4, img: '/serviceimage/g4.jpg' },
-  { id: 5, img: '/serviceimage/g5.jpg' },
-  { id: 6, img: '/serviceimage/g6.jpg.jpeg' },
+  { id: 5, img: '/serviceimage/g5.jpeg' },
+  { id: 6, img: '/serviceimage/g6.jpeg' },
   { id: 7, img: '/serviceimage/g7.jpg' },
   { id: 8, img: '/serviceimage/g8.jpg' },
   { id: 9, img: '/serviceimage/g9.jpg' },
   { id: 10, img: '/serviceimage/g10.jpg' },
-  { id: 11, img: '/serviceimage/g11.jpg' },
+  { id: 11, img: '/serviceimage/g11q.jpg' },
   { id: 12, img: '/serviceimage/g12.jpg' },
-  { id: 13, img: '/serviceimage/g13.jpg' },
+  { id: 13, img: '/serviceimage/g1q3.jpg' },
    { id: 14, img: '/serviceimage/g14.jpg.jpeg' },
-  { id: 15, img: '/serviceimage/g15.jpg' },
+  { id: 15, img: '/serviceimage/g15.qjpg' },
 ];
 
 export default function GalleryPage() {
@@ -64,7 +64,7 @@ export default function GalleryPage() {
 
       {/* 2. INTERACTIVE VISUAL GRID */}
       <div className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 md:gap-8">
           {galleryImages.map((item) => (
             <div 
               key={item.id} 
