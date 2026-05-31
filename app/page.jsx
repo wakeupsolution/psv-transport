@@ -37,13 +37,13 @@ const AnimatedNumber = ({ value }) => {
 export default function HomePage() {
   // --- DATA ARRAYS ---
   const banners = [
-  {
-    id: 1,
-    title: "REDEFINING SURFACE TRANSPORT",
-    sub: "Delivering Speed, Safety & Reliability",
-    desktopImg: "/banner/desktopbanner1.png",
-    mobileImg: "/banner/mobilebanner1.png",
-  },
+{
+  id: 1,
+  title: "SCV & LCV TRUCKS",
+  sub: "Reliable Transportation for Every Load",
+  desktopImg: "/banner/desktopbanner1.jpg",
+  mobileImg: "/banner/mobilebanner1.jpg",
+},
   {
     id: 2,
     title: "HCV TRUCKS & ODC TRUCKS",
