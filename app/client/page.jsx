@@ -17,6 +17,12 @@ export default function ClientsPage() {
     { id: 10, src: "/client/cli10.jpg" },
     { id: 11, src: "/client/cli11.jpg" },
     { id: 12, src: "/client/cli12.jpg" },
+    { id: 13, src: "/client/cli13.jpg" },
+    { id: 14, src: "/client/cli14.jpg" },
+    { id: 15, src: "/client/cli15.jpg" },
+    { id: 16, src: "/client/cli16.jpg" },
+    { id: 16, src: "/client/cli12.jpg" },
+
   ];
   const AnimatedNumber = ({ value }) => {
     const [count, setCount] = React.useState(0);

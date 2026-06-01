@@ -24,7 +24,7 @@ const lcvVehicles = [
       "20-32 ft (L) × 8 ft (W) × 8 ft (H) | Payload: Up to 9 Tons",
     ],
     popular_models: ["Eicher", "TATA", "Ashok Leyland", "Mahindra"],
-    image: "/serviceimage/g7.jpg",
+    image: "/serviceimage/g4.jpg",
   },
 ];
 

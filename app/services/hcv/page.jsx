@@ -45,7 +45,7 @@ const hcvVehicles = [
       "Eicher Pro",
       "BharatBenz",
     ],
-    image: "/serviceimage/g4.jpg",
+    image: "/serviceimage/g7.jpg",
   },
 ];
 
