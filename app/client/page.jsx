@@ -21,7 +21,7 @@ export default function ClientsPage() {
     { id: 14, src: "/client/cli14.jpg" },
     { id: 15, src: "/client/cli15.jpg" },
     { id: 16, src: "/client/cli16.jpg" },
-    { id: 16, src: "/client/cli12.jpg" },
+    { id: 17, src: "/client/cli17.jpg" },
 
   ];
   const AnimatedNumber = ({ value }) => {
