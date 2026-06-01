@@ -6,17 +6,17 @@ import Image from "next/image";
 export default function ClientsPage() {
   const clientLogos = [
     { id: 1, src: "/client/cli1.jpg" },
-    { id: 2, src: "/client/cli2.jpg.jpeg" },
+    { id: 2, src: "/client/cli2.jpg.jpg" },
     // { id: 3, src: "/client/cli3.jpg.jpeg" },
-    { id: 4, src: "/client/cli4.jpg.jpeg" },
-    { id: 5, src: "/client/cli5jpg.jpeg" },
-    { id: 6, src: "/client/cli6.jpg.jpeg" },
-    { id: 7, src: "/client/cli7.jpg.jpeg" },
-    { id: 8, src: "/client/cli8.jpg.jpeg" },
-    { id: 9, src: "/client/cli9.jpg.jpeg" },
+    { id: 4, src: "/client/cli4.jpg.jpg" },
+    { id: 5, src: "/client/cli5jpg.jpg" },
+    { id: 6, src: "/client/cli6.jpg.jpg" },
+    { id: 7, src: "/client/cli7.jpg.jpg" },
+    { id: 8, src: "/client/cli8.jpg.jpg" },
+    { id: 9, src: "/client/cli9.jpg.jpg" },
     { id: 10, src: "/client/cli10.jpg" },
-    { id: 11, src: "/client/cli11.jpg.jpeg" },
-    { id: 12, src: "/client/cli12.jpg.jpeg" },
+    { id: 11, src: "/client/cli11.jpg.jpg" },
+    { id: 12, src: "/client/cli12.jpg.jpg" },
   ];
   const AnimatedNumber = ({ value }) => {
     const [count, setCount] = React.useState(0);
