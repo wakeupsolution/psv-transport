@@ -589,7 +589,7 @@ const serviceData = [
           {/* Scrolling Track (Pauses on hover) */}
           <div className="flex w-[200%] gap-8 animate-marquee hover:[animation-play-state:paused] py-4 items-center">
             {/* Duplicated array for seamless infinite loop */}
-            {[1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6].map((idx, i) => (
+            {[1, 2, 4, 5, 6, 1, 2, 3, 4, 5, 6].map((idx, i) => (
               <div
                 key={i}
                 className="group relative w-48 h-24 md:w-56 md:h-28 flex-shrink-0 bg-white rounded-2xl flex items-center justify-center p-6 cursor-pointer border border-slate-100 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(220,38,38,0.12)] hover:-translate-y-1"
