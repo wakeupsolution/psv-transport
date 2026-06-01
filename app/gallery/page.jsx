@@ -13,11 +13,11 @@ const galleryImages = [
   { id: 8, img: '/serviceimage/g8.jpg' },
   { id: 9, img: '/serviceimage/g9.jpg' },
   { id: 10, img: '/serviceimage/g10.jpg' },
-  { id: 11, img: '/serviceimage/g11q.jpg' },
+  { id: 11, img: '/serviceimage/g11.jpeg' },
   { id: 12, img: '/serviceimage/g12.jpg' },
-  { id: 13, img: '/serviceimage/g1q3.jpg' },
+  { id: 13, img: '/serviceimage/g13.jpeg' },
    { id: 14, img: '/serviceimage/g14.jpg.jpeg' },
-  { id: 15, img: '/serviceimage/g15.qjpg' },
+  { id: 15, img: '/serviceimage/g15.jpeg' },
 ];
 
 export default function GalleryPage() {

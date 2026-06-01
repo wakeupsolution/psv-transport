@@ -7,7 +7,7 @@ export default function ClientsPage() {
   const clientLogos = [
     { id: 1, src: "/client/cli1.jpg" },
     { id: 2, src: "/client/cli2.jpg.jpeg" },
-    { id: 3, src: "/client/cli3.jpg.jpeg" },
+    // { id: 3, src: "/client/cli3.jpg.jpeg" },
     { id: 4, src: "/client/cli4.jpg.jpeg" },
     { id: 5, src: "/client/cli5jpg.jpeg" },
     { id: 6, src: "/client/cli6.jpg.jpeg" },
@@ -162,7 +162,7 @@ export default function ClientsPage() {
               READY TO SCALE?
             </h2>
             <button
-              onClick={() => window.location.href="/contact"}
+              onClick={() => (window.location.href = "/contact")}
               className="bg-red-600 hover:bg-white hover:text-red-600 text-white px-10 py-4 rounded-2xl font-black text-sm transition-all shadow-xl active:scale-95"
             >
               REQUEST A QUOTE
